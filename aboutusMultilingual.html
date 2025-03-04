@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="pageTitle">Ioulia's Tour - About Us</title>
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="/Style/style.css" />
+  <!-- i18next CDN -->
+  <script src="https://unpkg.com/i18next@21.6.3/dist/umd/i18next.min.js"></script>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="/Images/IT_Logo.png" alt="Ioulia's Tour Logo" style="height: 60px;" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav" aria-controls="navbarNav" 
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" data-i18n="nav.home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="aboutusMultilingual.html" data-i18n="nav.about">About Us</a>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="transfersMultilingual.html" data-i18n="nav.transfers">Transfers</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="destinations.html" data-i18n="nav.destinations">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#contact" data-i18n="nav.contact">Contact</a>
+          </li>
+          <!-- Language Switcher Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" 
+               data-bs-toggle="dropdown" aria-expanded="false">
+              <img id="currentFlag" src="/Images/Flags/english.png" alt="English" style="width:20px; margin-right:5px;"> 
+              <span id="currentLang">English</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item lang-switch" href="#" data-lang="en">
+                  <img src="/Images/Flags/english.png" alt="English" style="width:20px; margin-right:5px;"> English
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item lang-switch" href="#" data-lang="it">
+                  <img src="/Images/Flags/italy.png" alt="Italian" style="width:20px; margin-right:5px;"> Italiano
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item lang-switch" href="#" data-lang="el">
+                  <img src="/Images/Flags/greek.png" alt="Greek" style="width:20px; margin-right:5px;"> Ελληνικά
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Us Content -->
+  <section class="py-5">
+    <div class="container">
+      <h1 data-i18n="about.title">About Ioulia's Tour</h1>
+      <p class="lead" data-i18n="about.subtitle">
+        Learn more about our story and our passion for showing you the best of Crete.
+      </p>
+      <hr>
+      <div class="row align-items-center">
+        <!-- Text Column -->
+        <div class="col-md-6">
+            <p data-i18n="about.content1">
+                At Ioulia’s Tour, we don’t just show you Crete—we share the island we know and love as if you were family.
+            </p>
+            
+            <p data-i18n="about.content2">
+                We are a Greek and an Italian who have spent every summer in Crete for the past 30 years. Over the decades, we have explored every corner of this incredible island—its breathtaking beaches, charming villages, ancient sites, and hidden culinary gems. Crete is more than just a destination for us; it’s a place we’ve come to know deeply, and now, we want to share that passion with others.
+            </p>
+            
+            <p data-i18n="about.content3">
+                With our comfortable minivan and a love for storytelling, we personally guide each tour, creating authentic, tailor-made experiences for travelers who want more than just a standard excursion. Whether you’re looking to relax on secluded beaches, dive into Crete’s rich history, or indulge in the island’s world-renowned cuisine, we craft each journey to match your interests.
+            </p>
+            
+            <p data-i18n="about.content4">
+                We don’t follow rigid itineraries or rush from one site to the next. Instead, we take the time to explore at your pace, uncovering hidden gems and sharing the stories and traditions that make Crete so special.
+            </p>
+            
+            <p data-i18n="about.content5">
+                So, if you're looking for a warm, personalized, and unforgettable adventure, hop in our minivan and let us take you on a journey through the Crete we love.
+            </p>
+            
+            <p data-i18n="about.content6">
+                Let’s explore Crete together—one unforgettable trip at a time!
+            </p>
+            
+        </div>
+        <!-- Image Column: Photo of the Driver and Guide in Front of the Van -->
+        <div class="col-md-6">
+          <img src="/Images/us.jpg" alt="Driver and Guide in Front of the Van" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p data-i18n="footer.copyright">© 2023 Ioulia's Tour</p>
+      <p data-i18n="footer.contact">Contact: +30 123 456 789 | info@iouliastour.com</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- i18next Script -->
+  <script>
+    // Translation resources with About section text
+    const resources = {
+      en: {
+        translation: {
+          pageTitle: "Ioulia's Tour - About Us",
+          nav: {
+            home: "Home",
+            about: "About Us",
+            transfers: "Transfers",
+            destinations: "Destinations",
+            contact: "Contact"
+          },
+          about: {
+            title: "About Ioulia's Tour",
+            subtitle: "Learn more about our story and our passion for showing you the best of Crete.",
+            "content1": "At Ioulia’s Tour, we don’t just show you Crete—we share the island we know and love as if you were family.",
+            "content2": "We are a Greek and an Italian who have spent every summer in Crete for the past 30 years. Over the decades, we have explored every corner of this incredible island—its breathtaking beaches, charming villages, ancient sites, and hidden culinary gems. Crete is more than just a destination for us; it’s a place we’ve come to know deeply, and now, we want to share that passion with others.",
+            "content3": "With our comfortable minivan and a love for storytelling, we personally guide each tour, creating authentic, tailor-made experiences for travelers who want more than just a standard excursion. Whether you’re looking to relax on secluded beaches, dive into Crete’s rich history, or indulge in the island’s world-renowned cuisine, we craft each journey to match your interests.",
+            "content4": "We don’t follow rigid itineraries or rush from one site to the next. Instead, we take the time to explore at your pace, uncovering hidden gems and sharing the stories and traditions that make Crete so special.",
+            "content5": "So, if you're looking for a warm, personalized, and unforgettable adventure, hop in our minivan and let us take you on a journey through the Crete we love.",
+            "content6": "Let’s explore Crete together—one unforgettable trip at a time!",
+          },
+          footer: {
+            copyright: "© 2023 Ioulia's Tour",
+            contact: "Contact: +30 123 456 789 | info@iouliastour.com"
+          }
+        }
+      },
+      it: {
+        translation: {
+          pageTitle: "Tour di Ioulia - Chi Siamo",
+          nav: {
+            home: "Home",
+            about: "Chi Siamo",
+            transfers: "Trasferimenti",
+            destinations: "Destinazioni",
+            contact: "Contatto"
+          },
+          about: {
+            title: "Chi Siamo",
+            subtitle: "Scopri la nostra storia e la passione per mostrarti il meglio di Creta.",
+            "content1": "Con Ioulia’s Tour, non ci limitiamo a mostrarti Creta, ma ti facciamo vivere l’isola che conosciamo e amiamo, come se fossi parte della nostra famiglia.",
+            "content2": "Siamo una greca e un italiano che hanno trascorso ogni estate a Creta negli ultimi 30 anni. Nel corso dei decenni, abbiamo esplorato ogni angolo di questa incredibile isola: le sue spiagge mozzafiato, i villaggi pittoreschi, i siti antichi e i tesori culinari nascosti. Creta per noi non è solo una destinazione, ma un luogo che conosciamo profondamente e che ora vogliamo condividere con gli altri.",
+            "content3": "Con il nostro comodo minivan e la passione per il racconto, guidiamo personalmente ogni tour, creando esperienze autentiche e su misura per chi cerca qualcosa di più di una semplice escursione. Che tu voglia rilassarti su spiagge appartate, scoprire la ricca storia di Creta o assaporare la sua rinomata cucina, ogni viaggio è creato per adattarsi ai tuoi interessi.",
+            "content4": "Non seguiamo itinerari rigidi né corriamo da un sito all'altro. Preferiamo esplorare con calma, scoprendo luoghi nascosti e condividendo storie e tradizioni che rendono Creta così speciale.",
+            "content5": "Se cerchi un’avventura calda, personalizzata e indimenticabile, sali nel nostro minivan e lasciati guidare attraverso la Creta che amiamo.",
+            "content6": "Esploriamo Creta insieme—un viaggio indimenticabile alla volta!",
+          },
+          footer: {
+            copyright: "© 2023 Tour di Ioulia",
+            contact: "Contatto: +30 123 456 789 | info@iouliastour.com"
+          }
+        }
+      },
+      el: {
+        translation: {
+          pageTitle: "Τουρ της Ιουλίας - Σχετικά με εμάς",
+          nav: {
+            home: "Αρχική",
+            about: "Σχετικά με εμάς",
+            transfers: "Μεταφορές",
+            destinations: "Προορισμοί",
+            contact: "Επικοινωνία"
+          },
+          about: {
+            title: "Σχετικά με εμάς",
+            subtitle: "Μάθετε περισσότερα για την ιστορία μας και το πάθος μας να σας δείξουμε το καλύτερο της Κρήτης.",
+            "content1": "Στην Ioulia’s Tour, δεν σας δείχνουμε απλώς την Κρήτη—τη μοιραζόμαστε μαζί σας όπως θα κάναμε με την οικογένειά μας.",
+            "content2": "Είμαστε ένας Έλληνας και ένας Ιταλός που περνάμε κάθε καλοκαίρι στην Κρήτη τα τελευταία 30 χρόνια. Κατά τη διάρκεια των δεκαετιών, εξερευνήσαμε κάθε γωνιά αυτού του μοναδικού νησιού—τις εκπληκτικές παραλίες του, τα γραφικά χωριά, τους αρχαιολογικούς χώρους και τους κρυμμένους γαστρονομικούς θησαυρούς του. Για εμάς, η Κρήτη δεν είναι απλώς ένας προορισμός, αλλά ένα μέρος που γνωρίζουμε βαθιά και θέλουμε να μοιραστούμε με άλλους.",
+            "content3": "Με το άνετο μίνι βαν μας και την αγάπη μας για την αφήγηση, καθοδηγούμε προσωπικά κάθε ξενάγηση, δημιουργώντας αυθεντικές, εξατομικευμένες εμπειρίες για τους ταξιδιώτες που αναζητούν κάτι παραπάνω από μια τυπική εκδρομή. Είτε θέλετε να χαλαρώσετε σε απομονωμένες παραλίες, να εξερευνήσετε την πλούσια ιστορία της Κρήτης ή να απολαύσετε την ξακουστή της κουζίνα, σχεδιάζουμε κάθε διαδρομή με βάση τα ενδιαφέροντά σας.",
+            "content4": "Δεν ακολουθούμε αυστηρά προγράμματα ούτε βιαζόμαστε από το ένα αξιοθέατο στο άλλο. Αντίθετα, αφιερώνουμε χρόνο για να εξερευνήσουμε με τον δικό σας ρυθμό, ανακαλύπτοντας κρυμμένα διαμάντια και μοιραζόμενοι τις ιστορίες και τις παραδόσεις που κάνουν την Κρήτη τόσο ξεχωριστή.",
+            "content5": "Αν αναζητάτε μια ζεστή, προσωπική και αξέχαστη εμπειρία, ανεβείτε στο μίνι βαν μας και αφήστε μας να σας ξεναγήσουμε στην Κρήτη που αγαπάμε.",
+            "content6": "Ας εξερευνήσουμε μαζί την Κρήτη—ένα αξέχαστο ταξίδι τη φορά!"
+          },
+          footer: {
+            copyright: "© 2023 Τουρ της Ιουλίας",
+            contact: "Επικοινωνία: +30 123 456 789 | info@iouliastour.com"
+          }
+        }
+      }
+    };
+
+    // Initialize i18next and update content after DOM loads
+    document.addEventListener("DOMContentLoaded", function() {
+      i18next.init({
+        lng: localStorage.getItem('lng') || 'en',
+        resources: resources
+      }).then(() => {
+        updateContent();
+        updateCurrentLangDisplay();
+      });
+
+      // Mapping for language display info (flag and text)
+      const langData = {
+        en: { name: "English", flag: "/Images/Flags/english.png" },
+        it: { name: "Italiano", flag: "/Images/Flags/italy.png" },
+        el: { name: "Ελληνικά", flag: "/Images/Flags/greek.png" }
+      };
+
+      // Update current language display
+      function updateCurrentLangDisplay() {
+        const currentLang = i18next.language;
+        const langInfo = langData[currentLang] || langData.en;
+        document.getElementById('currentLang').textContent = langInfo.name;
+        document.getElementById('currentFlag').src = langInfo.flag;
+      }
+
+      // Update content based on current language
+      function updateContent() {
+        document.title = i18next.t('pageTitle');
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+          const key = element.getAttribute('data-i18n');
+          element.textContent = i18next.t(key);
+        });
+      }
+
+      // Language switcher event listeners
+      document.querySelectorAll('.lang-switch').forEach(el => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          const lang = e.currentTarget.getAttribute('data-lang');
+          i18next.changeLanguage(lang, () => {
+            localStorage.setItem('lng', lang);
+            updateContent();
+            updateCurrentLangDisplay();
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
