@@ -44,6 +44,20 @@ body {
     height: 100%;
     width: 100%;
   }
+
+  
+  
+  .hero-section {
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  #heroCarousel,
+  #heroCarousel .carousel-inner,
+  #heroCarousel .carousel-item {
+    height: 100%;
+  }
+  
   
   .hero-overlay {
     /* This overlay helps ensure text is readable over the images */
@@ -53,6 +67,19 @@ body {
   .hero-content {
     z-index: 2; /* Ensure content stays on top of the carousel and overlay */
   }
+
+
+  /* Original .hero-section rules might have height: 100vh and min-height: 100vh */
+  .hero-section.transfers-hero {
+    /* Override full-height rules */
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+  
+    /* Push hero content below sticky navbar */
+    padding-top: 4rem; /* adjust as needed to match your navbar height */
+  }
+  
   
 /* Cards & Images */
 .service-card {

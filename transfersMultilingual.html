@@ -61,19 +61,20 @@
     </div>
   </nav>
 
-<!-- Hero Section with matching heights -->
-<section class="hero-section position-relative" style="height: 200px;">
-  <div 
-    class="hero-overlay d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" 
-    style="background: rgba(0,77,116,0.7);"
-  >
-    <h1 class="text-white" data-i18n="transfers.title">Private Transfers in Crete</h1>
-    <p class="lead mt-3 text-white" data-i18n="transfers.subtitle">
-      Reliable and comfortable transfers from Chania Airport and Souda Port
-    </p>
-  </div>
-</section>
-
+  <section class="hero-section transfers-hero position-relative">
+    <div 
+      class="hero-overlay d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100"
+      style="background: rgba(0,77,116,0.7); z-index: 1;"
+    ></div>
+  
+    <div class="hero-content position-relative text-center text-white" style="z-index: 2;">
+      <h1 class="mb-1" data-i18n="transfers.title">Private Transfers in Crete</h1>
+      <p class="lead mb-0" data-i18n="transfers.subtitle">
+        Reliable and comfortable transfers from Chania Airport and Souda Port
+      </p>
+    </div>
+  </section>
+  
 
   <!-- Transfer Services -->
   <section class="py-5">
