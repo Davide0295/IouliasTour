@@ -54,7 +54,6 @@ body {
     z-index: 2; /* Ensure content stays on top of the carousel and overlay */
   }
   
-
 /* Cards & Images */
 .service-card {
     transition: transform 0.3s;
@@ -70,6 +69,20 @@ body {
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
+.van-carousel-img {
+  max-height: 300px;   /* Adjust to desired height */
+  object-fit: cover;   /* Ensures image is cropped if it exceeds max-height */
+}
+
+
+.card-img-top {
+  width: 100%;
+  height: 250px;       /* adjust to the height you prefer */
+  object-fit: cover;   /* crops the image while preserving aspect ratio */
+  object-position: 50% 50%; /* center the cropping area */
+}
+
 
 /* Custom Buttons */
 .btn-custom {
