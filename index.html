@@ -11,16 +11,96 @@
 
   <!-- i18next CDN -->
   <script src="https://unpkg.com/i18next@21.6.3/dist/umd/i18next.min.js"></script>
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- 16x16 -->
-<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png" />
-<!-- 32x32 -->
-<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png" />
+  <!-- Favicon links -->
+  <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="Images/android-chrome-512x512.png" />
 
-<!-- 512x512 (for higher-res usage, e.g., pinned sites) -->
-<link rel="icon" type="image/png" sizes="512x512" href="Images/android-chrome-512x512.png" />
-
+  <style>
+    /* Price button style with color #FFB703 */
+    .price-box button {
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #FFB703 !important;
+      border-color: #FFB703 !important;
+      color: #fff;
+    }
+    
+    /* Fixed WhatsApp Icon Button - WhatsApp icon only */
+    .whatsapp-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      text-decoration: none;
+    }
+    .whatsapp-fixed i {
+      color: #25D366;
+      font-size: 36px;
+    }
+    
+    .structured-description h4 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    
+    /* Vertical Timeline Styling */
+    .vertical-timeline {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 30px;
+      border-left: 3px solid #ff6600;
+    }
+    .vertical-timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -11px;
+      background-color: #ff6600;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .timeline-content {
+      margin-left: 30px;
+    }
+    .timeline-content h5 {
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    .timeline-content p {
+      margin-bottom: 0;
+    }
+    
+    /* Note style for flexible scheduling */
+    .flexibility-note {
+      font-style: italic;
+      color: #6c757d;
+    }
+    
+    /* Map container with fixed zoom out */
+    .map-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      border: 2px solid #ccc;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 450px;
+      pointer-events: none;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -43,7 +123,9 @@
           <li class="nav-item">
             <a class="nav-link" href="aboutusMultilingual.html" data-i18n="nav.about">About Us</a>
           </li>
-          <li class="nav-item"><a class="nav-link active" href="transfersMultilingual.html" data-i18n="nav.transfers">Transfers</a></li>
+          <li class="nav-item">
+            <a class="nav-link active" href="transfersMultilingual.html" data-i18n="nav.transfers">Transfers</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="destinations.html" data-i18n="nav.destinations">Destinations</a>
           </li>
@@ -53,7 +135,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" 
                data-bs-toggle="dropdown" aria-expanded="false">
-              <img id="currentFlag" src="Images/Flags/english.png" alt="English" style="width:20px; margin-right:5px;"> 
+              <img id="currentFlag" src="Images/Flags/english.png" alt="English" style="width:20px; margin-right:5px;">
               <span id="currentLang">English</span>
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
@@ -84,13 +166,19 @@
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="Images/crete1.jpg" class="d-block w-100" alt="Slide 1">
+          <img src="Images/it_beach.jpg" class="d-block w-100" alt="Slide 1" />
         </div>
         <div class="carousel-item">
-          <img src="Images/crete2.jpg" class="d-block w-100" alt="Slide 2">
+          <img src="Images/crete2.jpg" class="d-block w-100" alt="Slide 3" />
         </div>
         <div class="carousel-item">
-          <img src="Images/crete3.jpg" class="d-block w-100" alt="Slide 3">
+          <img src="Images/it_chania.jpg" class="d-block w-100" alt="Slide 2" />
+        </div>
+        <div class="carousel-item">
+          <img src="Images/crete3.jpg" class="d-block w-100" alt="Slide 3" />
+        </div>
+        <div class="carousel-item">
+          <img src="Images/it_elafonisi.jpeg" class="d-block w-100" alt="Slide 3" />
         </div>
       </div>
     </div>
@@ -99,240 +187,196 @@
     
     <div class="hero-content position-absolute top-50 start-50 translate-middle text-center text-white">
       <h1 data-i18n="hero.title">Discover Crete in Comfort</h1>
-      <p class="lead mt-3" data-i18n="hero.subtitle">Private Van Tours - Tailored Experiences - Airport & Port Transfers</p>
-      <a href="#contact" class="btn btn-custom mt-4" data-i18n="hero.cta">Book Your Adventure</a>
+      <p class="lead mt-3" data-i18n="hero.subtitle">
+        Professional NCC Service - Comfortable, Reliable & Customized Transfers
+      </p>
+      <a href="#contact" class="btn btn-custom mt-4" data-i18n="hero.cta">Book Your Service</a>
     </div>
   </section>
 
- <!-- About Section -->
-<section class="py-5">
-  <div class="container">
-    <div class="row align-items-center gy-5">
-      <!-- Carousel Column -->
-      <div class="col-md-6">
-        <!-- Bootstrap Carousel -->
-        <div id="vanCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="Images/van_interior.jpg" class="d-block w-100 van-image" alt="Van Interior 1">
-            </div>
-            <div class="carousel-item">
-              <img src="Images/van_interior.jpg" class="d-block w-100 van-image" alt="Van Interior 2">
-            </div>
-            <div class="carousel-item">
-              <img src="Images/van_interior.jpg" class="d-block w-100 van-image" alt="Van Interior 3">
-            </div>
-          </div>
-          <!-- Carousel Controls -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#vanCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#vanCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Text Column -->
-      <div class="col-md-6">
-        <h2 class="mb-4" data-i18n="about.title">Why Choose Us?</h2>
-        <ul class="list-unstyled">
-          <li class="mt-4" data-i18n="about.item1">✔️ Modern, air-conditioned van</li>
-          <li class="mt-4" data-i18n="about.item2">✔️ Flexible itineraries</li>
-          <li class="mt-4" data-i18n="about.item3">✔️ English-speaking driver/guide</li>
-          <li class="mt-4" data-i18n="about.item4">✔️ Door-to-door service</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-  <!-- Services Section -->
-  <section class="py-5 bg-light">
+  <!-- About Section -->
+  <section class="py-5">
     <div class="container">
-      <h2 class="text-center mb-5" data-i18n="services.title">Popular Tours</h2>
-      <div class="row">
-        <div class="col-md-4 mb-4">
-          <div class="card service-card h-100">
-            <div class="card-body">
-              <h5 data-i18n="services.tour1.title">West Crete Discovery</h5>
-              <p data-i18n="services.tour1.description">Full-day tour exploring Chania, Rethymno, and stunning beaches</p>
-              <p class="text-primary" data-i18n="services.tour1.price">From €299</p>
+      <div class="row align-items-center gy-5">
+        <div class="col-md-6">
+          <div id="vanCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="Images/ιτ_vanInterior.jpg" class="d-block w-100 van-image" alt="Van Interior 1" />
+              </div>
+              <div class="carousel-item">
+                <img src="Images/ιτ_vanExterior.jpg" class="d-block w-100 van-image" alt="Van Exterior 2" />
+              </div>
             </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#vanCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#vanCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
-        <!-- Repeat for other tours -->
-        <div class="col-md-4 mb-4">
-            <div class="card service-card h-100">
-              <div class="card-body">
-                <h5 data-i18n="services.tour1.title">West Crete Discovery</h5>
-                <p data-i18n="services.tour1.description">Full-day tour exploring Chania, Rethymno, and stunning beaches</p>
-                <p class="text-primary" data-i18n="services.tour1.price">From €299</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-4">
-            <div class="card service-card h-100">
-              <div class="card-body">
-                <h5 data-i18n="services.tour1.title">West Crete Discovery</h5>
-                <p data-i18n="services.tour1.description">Full-day tour exploring Chania, Rethymno, and stunning beaches</p>
-                <p class="text-primary" data-i18n="services.tour1.price">From €299</p>
-              </div>
-            </div>
-          </div>
+        <div class="col-md-6">
+          <h2 class="mb-4" data-i18n="about.title">Why Choose Us?</h2>
+          <ul class="list-unstyled">
+            <li class="mt-4" data-i18n="about.item1">✔️ Modern, air-conditioned van</li>
+            <li class="mt-4" data-i18n="about.item2">✔️ Flexible itineraries</li>
+            <li class="mt-4" data-i18n="about.item3">✔️ English-speaking driver</li>
+            <li class="mt-4" data-i18n="about.item4">✔️ Door-to-door service</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-<!-- Contact Section -->
-<section id="contact" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-5" data-i18n="contact.title">Book Your Tour</h2>
-    <p class="text-center mb-4" data-i18n="contact.description">
-      For more information or to book a tour, please contact us using the form below.
-    </p>
-    <form id="contactForm" action="https://formspree.io/f/myzegyzj" method="POST" novalidate>
-      <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Your Name" 
-               name="name" data-i18n="contact.namePlaceholder" required />
-        <div class="invalid-feedback">Please enter your name.</div>
+  <!-- Service Area Section -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4" data-i18n="serviceArea.title">Service Area</h2>
+      <p class="text-center mb-5" data-i18n="serviceArea.description">
+        The map below highlights the area in which we operate, covering both the Akrotiri and Chania regions.
+      </p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d131559.15131314408!2d24.06!3d35.55!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1691500000000&zoomControl=false&disableDefaultUI=true&scrollwheel=false&draggable=false"
+          frameborder="0"
+          style="border:0; pointer-events: none;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
-      <div class="mb-3">
-        <input type="email" class="form-control" placeholder="Your Email" 
-               name="email" data-i18n="contact.emailPlaceholder" required />
-        <div class="invalid-feedback">Please enter a valid email.</div>
-      </div>
-      <div class="mb-3">
-        <textarea class="form-control" rows="4" placeholder="Message" 
-                  name="message" data-i18n="contact.messagePlaceholder" required></textarea>
-        <div class="invalid-feedback">Please enter your message.</div>
-      </div>
-      <button type="submit" class="btn btn-custom w-100" data-i18n="contact.submit">Send Inquiry</button>
-    </form>
-    
-  </div>
-</section>
+    </div>
+  </section>
 
-<!-- JavaScript for AJAX submission and validation -->
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('contactForm');
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" data-i18n="contact.title">Book Your Service</h2>
+      <p class="text-center mb-4" data-i18n="contact.description">
+        To book our service, please call us at +30 6942818200 or email us at contact.iouliastour@gmail.com. Alternatively, fill in the form below and we will get back to you.
+      </p>
+      <form id="contactForm" action="https://formspree.io/f/myzegyzj" method="POST" novalidate>
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Your Name" name="name" data-i18n="contact.namePlaceholder" required />
+          <div class="invalid-feedback">Please enter your name.</div>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Your Email" name="email" data-i18n="contact.emailPlaceholder" required />
+          <div class="invalid-feedback">Please enter a valid email.</div>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="4" placeholder="Message" name="message" data-i18n="contact.messagePlaceholder" required></textarea>
+          <div class="invalid-feedback">Please enter your message.</div>
+        </div>
+        <button type="submit" class="btn btn-custom w-100" data-i18n="contact.submit">Send Inquiry</button>
+      </form>
+    </div>
+  </section>
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault(); // Stop the default form submission
+  <!-- Fixed WhatsApp Icon Button -->
+  <a href="whatsapp://send?phone=306942818200" class="whatsapp-fixed" target="_blank" title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
-      // Remove previous error styles
-      Array.from(form.elements).forEach(element => {
-        element.classList.remove('is-invalid');
-      });
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p data-i18n="footer.copyright">© 2025 Ioulia's Tour</p>
+      <p data-i18n="footer.contact">Contact: +30 6942818200 | contact.iouliastour@gmail.com</p>
+      <a href="whatsapp://send?phone=306942818200" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp fa-2x" style="color: #25D366;"></i>
+      </a>
+    </div>
+  </footer>
 
-      // Check HTML5 validity
-      if (!form.checkValidity()) {
-        // If the form is not valid, loop through each form field and mark it invalid if necessary
-        Array.from(form.elements).forEach(element => {
-          if (element.hasAttribute('required') && !element.value) {
-            element.classList.add('is-invalid');
-          }
+  <!-- JavaScript for form submission and validation -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("contactForm");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        Array.from(form.elements).forEach((element) => {
+          element.classList.remove("is-invalid");
         });
-        return; // Prevent further submission
-      }
-
-      // If validation passes, submit via AJAX using the Fetch API
-      const formData = new FormData(form);
-
-      fetch(form.action, {
-        method: form.method,
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
+        if (!form.checkValidity()) {
+          Array.from(form.elements).forEach((element) => {
+            if (element.hasAttribute("required") && !element.value) {
+              element.classList.add("is-invalid");
+            }
+          });
+          return;
         }
-      })
-      .then(response => {
-        if (response.ok) {
-          alert('Your message was sent successfully!');
-          form.reset();
-        } else {
-          alert('Oops! There was a problem sending your message.');
-        }
-      })
-      .catch(error => {
-        alert('Oops! There was a problem sending your message.');
+        const formData = new FormData(form);
+        fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: { Accept: "application/json" },
+        })
+          .then((response) => {
+            if (response.ok) {
+              alert("Your message was sent successfully!");
+              form.reset();
+            } else {
+              alert("Oops! There was a problem sending your message.");
+            }
+          })
+          .catch((error) => {
+            alert("Oops! There was a problem sending your message.");
+          });
       });
     });
-  });
-</script>
-
-
-<!-- Footer -->
-<footer class="bg-dark text-white py-4">
-  <div class="container text-center">
-    <p data-i18n="footer.copyright">© 2025 Ioulia's Tour</p>
-    <p data-i18n="footer.contact">Contact: +30 123 456 789 | info@iouliastour.com</p>
-    <!-- WhatsApp Icon Link using Font Awesome -->
-    <a href="whatsapp://send?phone=15551234567" target="_blank" title="Chat with us on WhatsApp">
-      <i class="fab fa-whatsapp fa-2x" style="color: #25D366;"></i>
-    </a>
-  </div>
-</footer>
+  </script>
 
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- i18next Script -->
+  <!-- i18next Initialization Script -->
   <script>
     const resources = {
       en: {
-  
         translation: {
-          // All translation keys added
           pageTitle: "Ioulia's Tour",
           nav: {
             home: "Home",
             about: "About Us",
             transfers: "Transfers",
             destinations: "Destinations",
-            contact: "Contact"
+            contact: "Contact",
           },
           hero: {
             title: "Discover Crete in Comfort",
-            subtitle: "Private Van Tours - Tailored Experiences - Airport & Port Transfers",
-            cta: "Book Your Adventure"
+            subtitle: "Professional NCC Service - Comfortable, Reliable & Customized Transfers",
+            cta: "Book Your Service",
           },
           about: {
             title: "Why Choose Us?",
             item1: "✔️ Modern, air-conditioned van",
             item2: "✔️ Flexible itineraries",
-            item3: "✔️ English-speaking driver/guide",
-            item4: "✔️ Door-to-door service"
+            item3: "✔️ English-speaking driver",
+            item4: "✔️ Door-to-door service",
           },
-          services: {
-            title: "Popular Tours",
-            tour1: {
-              title: "West Crete Discovery",
-              description: "Full-day tour exploring Chania, Rethymno, and stunning beaches",
-              price: "From €xxx"
-            }
+          serviceArea: {
+            title: "Service Area",
+            description: "The map below highlights the area in which we operate, covering both the Akrotiri and Chania regions.",
           },
           contact: {
-            title: "Book Your Tour",
-            description: "For more details or to book your tour, please contact us directly using the phone number or email provided below. Alternatively, fill out the form with your email address and preferred date, and we’ll get back to you as soon as possible.",
+            title: "Book Your Service",
+            description: "To book our service, please call us at +30 6942818200 or email us at contact.iouliastour@gmail.com. Alternatively, fill in the form below and we will get back to you.",
             namePlaceholder: "Your Name",
             emailPlaceholder: "Your Email",
             messagePlaceholder: "Message",
-            submit: "Send Inquiry"
+            submit: "Send Inquiry",
           },
           footer: {
             copyright: "© 2025 Ioulia's Tour",
-            contact: "Contact: +30 123 456 789 | info@iouliastour.com"
-          }
-        }
+            contact: "Contact: +30 6942818200 | contact.iouliastour@gmail.com",
+          },
+        },
       },
       it: {
-        
         translation: {
           pageTitle: "Ioulia's Tour",
           nav: {
@@ -340,44 +384,39 @@
             about: "Chi Siamo",
             transfers: "Trasferimenti",
             destinations: "Destinazioni",
-            contact: "Contatto"
+            contact: "Contatto",
           },
           hero: {
             title: "Scopri Creta in Comfort",
-            subtitle: "Tour Privati in Van - Esperienze Personalizzate - Trasferimenti Aeroportuali e Portuali",
-            cta: "Prenota la tua Avventura"
+            subtitle: "Servizio NCC Professionale - Trasferimenti Confortevoli, Affidabili e Personalizzati",
+            cta: "Prenota il Servizio",
           },
           about: {
             title: "Perché Sceglierci?",
             item1: "✔️ Van moderno e climatizzato",
             item2: "✔️ Itinerari flessibili",
-            item3: "✔️ Autista/guida di lingua inglese",
-            item4: "✔️ Servizio porta a porta"
+            item3: "✔️ Autista di lingua inglese",
+            item4: "✔️ Servizio porta a porta",
           },
-          services: {
-            title: "Tour Popolari",
-            tour1: {
-              title: "Alla Scoperta della Creta Occidentale",
-              description: "Tour giornaliero tra Chania, Rethymno e spiagge mozzafiato",
-              price: "Da €xxx"
-            }
+          serviceArea: {
+            title: "Zona Servita",
+            description: "La mappa sottostante evidenzia la zona in cui operiamo, coprendo le regioni di Akrotiri e Chania.",
           },
           contact: {
-            title: "Prenota il Tuo Tour",
-            description: "Per maggiori informazioni o per prenotare il tuo tour, contattaci direttamente tramite il numero di telefono o l'email indicati di seguito. In alternativa, compila il modulo con il tuo indirizzo email e la data preferita, e ti risponderemo al più presto.",
+            title: "Prenota il Servizio",
+            description: "Per prenotare il servizio, contattaci al numero +30 6942818200 oppure alla email contact.iouliastour@gmail.com. In alternativa, compila il modulo e verrai ricontattato.",
             namePlaceholder: "Il tuo nome",
             emailPlaceholder: "La tua email",
             messagePlaceholder: "Messaggio",
-            submit: "Invia Richiesta"
+            submit: "Invia Richiesta",
           },
           footer: {
             copyright: "© 2025 Ioulia's Tour",
-            contact: "Contatto: +30 123 456 789 | info@iouliastour.com"
-          }
-        }
+            contact: "Contatto: +30 6942818200 | contact.iouliastour@gmail.com",
+          },
+        },
       },
       el: {
-        
         translation: {
           pageTitle: "Ioulia's Tour",
           nav: {
@@ -385,86 +424,82 @@
             about: "Σχετικά με εμάς",
             transfers: "Μεταφορές",
             destinations: "Προορισμοί",
-            contact: "Επικοινωνία"
+            contact: "Επικοινωνία",
           },
           hero: {
             title: "Ανακαλύψτε την Κρήτη με Άνεση",
-            subtitle: "Ιδιωτικά Τουρ με Van - Προσαρμοσμένες Εμπειρίες - Μεταφορές Αεροδρομίου & Λιμανιού",
-            cta: "Κλείστε την Περιπέτειά σας"
+            subtitle: "Επαγγελματική Υπηρεσία NCC - Άνετες, Αξιόπιστες & Προσαρμοσμένες Μεταφορές",
+            cta: "Κλείστε την Υπηρεσία",
           },
           about: {
             title: "Γιατί να μας επιλέξετε;",
             item1: "✔️ Μοντέρνο κλιματιζόμενο van",
             item2: "✔️ Ευέλικτα δρομολόγια",
-            item3: "✔️ Αγγλόφωνος οδηγός/ξενάγος",
-            item4: "✔️ Υπηρεσία από πόρτα σε πόρτα"
+            item3: "✔️ Αγγλόφωνος οδηγός",
+            item4: "✔️ Υπηρεσία από πόρτα σε πόρτα",
           },
-          services: {
-            title: "Δημοφιλή Τουρ",
-            tour1: {
-              title: "Ανακαλύπτοντας τη Δυτική Κρήτη",
-              description: "Ημερήσια εκδρομή στις Χανιά, το Ρέθυμνο και πανέμορφες παραλίες",
-              price: "Από €xxx"
-            }
+          serviceArea: {
+            title: "Περιοχή Εξυπηρέτησης",
+            description: "Ο χάρτης παρακάτω επισημαίνει την περιοχή στην οποία δραστηριοποιούμαστε, καλύπτοντας τις περιοχές του Ακρωτηρίου και των Χανίων.",
           },
           contact: {
-            title: "Κλείστε το Τουρ σας",
-            description: "Για περισσότερες πληροφορίες ή για να κλείσετε την περιήγησή σας, επικοινωνήστε απευθείας μαζί μας μέσω του τηλεφώνου ή του email που παρέχονται παρακάτω. Εναλλακτικά, συμπληρώστε τη φόρμα με το email σας και την επιθυμητή ημερομηνία, και θα σας απαντήσουμε το συντομότερο δυνατό.",
+            title: "Κλείστε την Υπηρεσία σας",
+            description: "Για να κλείσετε την υπηρεσία μας, επικοινωνήστε στο +30 6942818200 ή στο email contact.iouliastour@gmail.com. Εναλλακτικά, συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας.",
             namePlaceholder: "Το όνομά σας",
             emailPlaceholder: "Το email σας",
             messagePlaceholder: "Μήνυμα",
-            submit: "Αποστολή Αίτησης"
+            submit: "Αποστολή Αίτησης",
           },
           footer: {
             copyright: "© 2025 Ioulia's Tour",
-            contact: "Επικοινωνία: +30 123 456 789 | info@iouliastour.com"
-          }
-        }
-      }
+            contact: "Επικοινωνία: +30 6942818200 | contact.iouliastour@gmail.com",
+          },
+        },
+      },
     };
 
-    // Initialize i18next
-    i18next.init({
-      lng: localStorage.getItem('lng') || 'en',
-      resources: resources
-    }).then(() => {
-      updateContent();
-      updateCurrentLangDisplay();
-    });
+    i18next
+      .init({
+        lng: localStorage.getItem("lng") || "en",
+        resources: resources,
+      })
+      .then(() => {
+        updateContent();
+        updateCurrentLangDisplay();
+      });
 
     const langData = {
       en: { name: "English", flag: "Images/Flags/english.png" },
       it: { name: "Italiano", flag: "Images/Flags/italy.png" },
-      el: { name: "Ελληνικά", flag: "Images/Flags/greek.png" }
+      el: { name: "Ελληνικά", flag: "Images/Flags/greek.png" },
     };
 
     function updateCurrentLangDisplay() {
       const currentLang = i18next.language;
       const langInfo = langData[currentLang] || langData.en;
-      document.getElementById('currentLang').textContent = langInfo.name;
-      document.getElementById('currentFlag').src = langInfo.flag;
+      document.getElementById("currentLang").textContent = langInfo.name;
+      document.getElementById("currentFlag").src = langInfo.flag;
     }
 
     function updateContent() {
-      document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (element.placeholder) {
+      document.title = i18next.t("pageTitle");
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        if (typeof element.placeholder !== "undefined" && element.placeholder !== "") {
           element.placeholder = i18next.t(key);
         } else {
           element.textContent = i18next.t(key);
         }
       });
-      
-      document.title = i18next.t('pageTitle');
       updateCurrentLangDisplay();
     }
 
-    document.querySelectorAll('.lang-switch').forEach(el => {
-      el.addEventListener('click', (e) => {
+    document.querySelectorAll(".lang-switch").forEach((el) => {
+      el.addEventListener("click", (e) => {
         e.preventDefault();
-        const lang = e.target.closest('a').dataset.lang;
+        const lang = e.target.closest("a").dataset.lang;
         i18next.changeLanguage(lang, () => {
-          localStorage.setItem('lng', lang);
+          localStorage.setItem("lng", lang);
           updateContent();
         });
       });

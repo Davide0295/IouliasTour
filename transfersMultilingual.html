@@ -10,16 +10,97 @@
   <link rel="stylesheet" href="Style/style.css" />
   <!-- i18next CDN -->
   <script src="https://unpkg.com/i18next@21.6.3/dist/umd/i18next.min.js"></script>
-
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon links -->
+  <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="Images/android-chrome-512x512.png" />
+  
+  <style>
+    /* Price button style update with color #FFB703 */
+    .price-box button {
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #FFB703 !important;
+      border-color: #FFB703 !important;
+      color: #fff;
+    }
 
-    <!-- 16x16 -->
-<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png" />
-<!-- 32x32 -->
-<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png" />
+    .structured-description h4 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
 
-<!-- 512x512 (for higher-res usage, e.g., pinned sites) -->
-<link rel="icon" type="image/png" sizes="512x512" href="Images/android-chrome-512x512.png" />
+    /* Vertical Timeline Styling */
+    .vertical-timeline {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 30px;
+      border-left: 3px solid #ff6600;
+    }
+    .vertical-timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -11px;
+      background-color: #ff6600;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .timeline-content {
+      margin-left: 30px;
+    }
+    .timeline-content h5 {
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    .timeline-content p {
+      margin-bottom: 0;
+    }
+
+    /* Note style for flexible scheduling */
+    .flexibility-note {
+      font-style: italic;
+      color: #6c757d;
+    }
+
+    /* Map container */
+    .map-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      border: 2px solid #ccc;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 450px;
+      pointer-events: none;
+    }
+
+    /* Fixed WhatsApp Icon Button (icon only, transparent background) */
+    .whatsapp-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      text-decoration: none;
+    }
+    .whatsapp-fixed i {
+      color: #25D366;
+      font-size: 36px;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -38,8 +119,8 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="nav.home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="aboutusMultilingual.html" data-i18n="nav.about">About Us</a></li>
-          <li class="nav-item"><a class="nav-link active" href="transfersMultilingual.html" data-i18n="nav.transfers">Transfers</a></li>
-          <li class="nav-item"><a class="nav-link" href="destinations.html" data-i18n="nav.destinations">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="transfersMultilingual.html" data-i18n="nav.transfers">Transfers</a></li>
+          <li class="nav-item"><a class="nav-link active" href="destinations.html" data-i18n="nav.destinations">Destinations</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
           <!-- Language Switcher Dropdown -->
           <li class="nav-item dropdown">
@@ -48,12 +129,21 @@
               <span id="currentLang">English</span>
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item lang-switch" href="#" data-lang="en">
-                <img src="Images/Flags/english.png" alt="English" style="width:20px; margin-right:5px;"> English</a></li>
-              <li><a class="dropdown-item lang-switch" href="#" data-lang="it">
-                <img src="Images/Flags/italy.png" alt="Italian" style="width:20px; margin-right:5px;"> Italiano</a></li>
-              <li><a class="dropdown-item lang-switch" href="#" data-lang="el">
-                <img src="Images/Flags/greek.png" alt="Greek" style="width:20px; margin-right:5px;"> Ελληνικά</a></li>
+              <li>
+                <a class="dropdown-item lang-switch" href="#" data-lang="en">
+                  <img src="Images/Flags/english.png" alt="English" style="width:20px; margin-right:5px;"> English
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item lang-switch" href="#" data-lang="it">
+                  <img src="Images/Flags/italy.png" alt="Italian" style="width:20px; margin-right:5px;"> Italiano
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item lang-switch" href="#" data-lang="el">
+                  <img src="Images/Flags/greek.png" alt="Greek" style="width:20px; margin-right:5px;"> Ελληνικά
+                </a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -62,10 +152,7 @@
   </nav>
 
   <section class="hero-section transfers-hero position-relative">
-    <div 
-      class="hero-overlay d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100"
-      style="background: rgba(0,77,116,0.7); z-index: 1;"
-    ></div>
+    <div class="hero-overlay d-flex flex-column justify-content-center align-items-center position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0,77,116,0.7); z-index: 1;"></div>
   
     <div class="hero-content position-relative text-center text-white" style="z-index: 2;">
       <h1 class="mb-1" data-i18n="transfers.title">Private Transfers in Crete</h1>
@@ -75,7 +162,6 @@
     </div>
   </section>
   
-
   <!-- Transfer Services -->
   <section class="py-5">
     <div class="container">
@@ -102,7 +188,7 @@
             <div class="card-body">
               <h5 class="card-title" data-i18n="transfers.souda.title">Souda Port Transfers</h5>
               <p class="card-text" data-i18n="transfers.souda.description">
-                Whether you're arriving by ferry or cruise, our private Souda Port transfers ensure a stress-free journey to your hotel or destination in Crete.
+                Whether arriving by ferry or cruise, our private Souda Port transfers ensure a stress-free journey to your hotel or destination in Crete.
               </p>
             </div>
           </div>
@@ -110,18 +196,22 @@
       </div>
     </div>
   </section>
+  
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p data-i18n="footer.copyright">© 2025 Ioulia's Tour</p>
+      <p data-i18n="footer.contact">Contact: +30 6942818200 | contact.iouliastour@gmail.com</p>
+      <a href="whatsapp://send?phone=306942818200" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp fa-2x" style="color: #25D366;"></i>
+      </a>
+    </div>
+  </footer>
 
-<!-- Footer -->
-<footer class="bg-dark text-white py-4">
-  <div class="container text-center">
-    <p data-i18n="footer.copyright">© 2025 Ioulia's Tour</p>
-    <p data-i18n="footer.contact">Contact: +30 123 456 789 | info@iouliastour.com</p>
-    <!-- WhatsApp Icon Link using Font Awesome -->
-    <a href="whatsapp://send?phone=15551234567" target="_blank" title="Chat with us on WhatsApp">
-      <i class="fab fa-whatsapp fa-2x" style="color: #25D366;"></i>
-    </a>
-  </div>
-</footer>
+  <!-- Fixed WhatsApp Icon Button -->
+  <a href="whatsapp://send?phone=306942818200" class="whatsapp-fixed" target="_blank" title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -142,7 +232,7 @@
           transfers: {
             title: "Private Transfers in Crete",
             subtitle: "Reliable and comfortable transfers from Chania Airport and Souda Port",
-            intro: "Let us take care of your transfer needs with our private van service, offering reliable and stress-free transportation.",
+            intro: "Let us take care of your transfer needs with our private van service. Our service is on demand – contact us for further info and booking.",
             chania: {
               title: "Chania Airport Transfers",
               description: "Private transfers to and from Chania Airport with a comfortable air-conditioned van."
@@ -154,7 +244,15 @@
           },
           footer: {
             copyright: "© 2025 Ioulia's Tour",
-            contact: "Contact: +30 123 456 789 | info@iouliastour.com"
+            contact: "Contact: +30 6942818200 | contact.iouliastour@gmail.com"
+          },
+          contact: {
+            title: "Book Your Service",
+            description: "Our service is available on demand. To book our service or get more information, please call us at +30 6942818200 or email us at contact.iouliastour@gmail.com. Alternatively, fill in the form below and we will get back to you.",
+            namePlaceholder: "Your Name",
+            emailPlaceholder: "Your Email",
+            messagePlaceholder: "Message",
+            submit: "Send Inquiry"
           }
         }
       },
@@ -171,7 +269,7 @@
           transfers: {
             title: "Trasferimenti Privati a Creta",
             subtitle: "Trasferimenti affidabili e confortevoli da Aeroporto di Chania e Porto di Souda",
-            intro: "Affidati a noi per i tuoi trasferimenti privati con il nostro comodo minivan, per un viaggio sicuro e senza stress.",
+            intro: "Affidati a noi per i tuoi trasferimenti privati con il nostro minivan. Il servizio è on demand – contattaci per ulteriori informazioni e prenotazioni.",
             chania: {
               title: "Trasferimenti Aeroporto di Chania",
               description: "Trasferimenti privati da e per l'Aeroporto di Chania con un confortevole minivan climatizzato."
@@ -183,7 +281,15 @@
           },
           footer: {
             copyright: "© 2025 Ioulia's Tour",
-            contact: "Contatto: +30 123 456 789 | info@iouliastour.com"
+            contact: "Contatto: +30 6942818200 | contact.iouliastour@gmail.com"
+          },
+          contact: {
+            title: "Prenota il Servizio",
+            description: "Il servizio è on demand. Per prenotare il servizio o per maggiori informazioni, contattaci al numero +30 6942818200 oppure alla email contact.iouliastour@gmail.com. In alternativa, compila il modulo e verrai ricontattato.",
+            namePlaceholder: "Il tuo nome",
+            emailPlaceholder: "La tua email",
+            messagePlaceholder: "Messaggio",
+            submit: "Invia Richiesta"
           }
         }
       },
@@ -200,7 +306,7 @@
           transfers: {
             title: "Ιδιωτικές Μεταφορές στην Κρήτη",
             subtitle: "Αξιόπιστες και άνετες μεταφορές από το Αεροδρόμιο Χανίων και το Λιμάνι της Σούδας",
-            intro: "Εμπιστευτείτε μας για τις μεταφορές σας με το ιδιωτικό μας βαν, εξασφαλίζοντας ένα άνετο και ασφαλές ταξίδι.",
+            intro: "Εμπιστευτείτε μας για τις μεταφορές σας με το ιδιωτικό μας βαν. Η υπηρεσία είναι on demand – επικοινωνήστε για λεπτομέρειες και κράτηση.",
             chania: {
               title: "Μεταφορές από το Αεροδρόμιο Χανίων",
               description: "Ιδιωτικές μεταφορές από και προς το Αεροδρόμιο Χανίων με άνετο, κλιματιζόμενο βαν."
@@ -212,57 +318,63 @@
           },
           footer: {
             copyright: "© 2025 Ioulia's Tour",
-            contact: "Επικοινωνία: +30 123 456 789 | info@iouliastour.com"
+            contact: "Επικοινωνία: +30 6942818200 | contact.iouliastour@gmail.com"
+          },
+          contact: {
+            title: "Κλείστε την Υπηρεσία σας",
+            description: "Η υπηρεσία είναι on demand. Για να κλείσετε την υπηρεσία ή για περισσότερες πληροφορίες, επικοινωνήστε στο +30 6942818200 ή στο email contact.iouliastour@gmail.com. Εναλλακτικά, συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας.",
+            namePlaceholder: "Το όνομά σας",
+            emailPlaceholder: "Το email σας",
+            messagePlaceholder: "Μήνυμα",
+            submit: "Αποστολή Αίτησης"
           }
         }
       }
     };
 
-    document.addEventListener("DOMContentLoaded", function() {
-      // Initialize i18next
-      i18next.init({
-        lng: localStorage.getItem('lng') || 'en',
-        debug: false,
-        resources: resources
-      }).then(() => {
+    i18next
+      .init({
+        lng: localStorage.getItem("lng") || "en",
+        resources: resources,
+      })
+      .then(() => {
         updateContent();
         updateCurrentLangDisplay();
       });
 
-      // Mapping for language display info (flag and text)
-      const langData = {
-        en: { name: "English", flag: "Images/Flags/english.png" },
-        it: { name: "Italiano", flag: "Images/Flags/italy.png" },
-        el: { name: "Ελληνικά", flag: "Images/Flags/greek.png" }
-      };
+    const langData = {
+      en: { name: "English", flag: "Images/Flags/english.png" },
+      it: { name: "Italiano", flag: "Images/Flags/italy.png" },
+      el: { name: "Ελληνικά", flag: "Images/Flags/greek.png" },
+    };
 
-      // Update current language display
-      function updateCurrentLangDisplay() {
-        const currentLang = i18next.language;
-        const langInfo = langData[currentLang] || langData.en;
-        document.getElementById('currentLang').textContent = langInfo.name;
-        document.getElementById('currentFlag').src = langInfo.flag;
-      }
+    function updateCurrentLangDisplay() {
+      const currentLang = i18next.language;
+      const langInfo = langData[currentLang] || langData.en;
+      document.getElementById("currentLang").textContent = langInfo.name;
+      document.getElementById("currentFlag").src = langInfo.flag;
+    }
 
-      // Update content based on current language
-      function updateContent() {
-        document.title = i18next.t('pageTitle');
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-          const key = element.getAttribute('data-i18n');
+    function updateContent() {
+      document.title = i18next.t("pageTitle");
+      document.querySelectorAll("[data-i18n]").forEach((element) => {
+        const key = element.getAttribute("data-i18n");
+        if (typeof element.placeholder !== "undefined" && element.placeholder !== "") {
+          element.placeholder = i18next.t(key);
+        } else {
           element.textContent = i18next.t(key);
-        });
-      }
+        }
+      });
+      updateCurrentLangDisplay();
+    }
 
-      // Language switcher event listener
-      document.querySelectorAll('.lang-switch').forEach(el => {
-        el.addEventListener('click', (e) => {
-          e.preventDefault();
-          const lang = e.currentTarget.getAttribute('data-lang');
-          i18next.changeLanguage(lang, () => {
-            localStorage.setItem('lng', lang);
-            updateContent();
-            updateCurrentLangDisplay();
-          });
+    document.querySelectorAll(".lang-switch").forEach((el) => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        const lang = e.target.closest("a").dataset.lang;
+        i18next.changeLanguage(lang, () => {
+          localStorage.setItem("lng", lang);
+          updateContent();
         });
       });
     });

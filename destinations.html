@@ -12,16 +12,97 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <!-- i18next CDN -->
   <script src="https://unpkg.com/i18next@21.6.3/dist/umd/i18next.min.js"></script>
-
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Favicon links -->
+  <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="Images/android-chrome-512x512.png" />
+  
+  <style>
+    /* Price button style with color #FFB703 */
+    .price-box button {
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #FFB703 !important;
+      border-color: #FFB703 !important;
+      color: #fff;
+    }
 
-    <!-- 16x16 -->
-<link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png" />
-<!-- 32x32 -->
-<link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png" />
+    .structured-description h4 {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
 
-<!-- 512x512 (for higher-res usage, e.g., pinned sites) -->
-<link rel="icon" type="image/png" sizes="512x512" href="Images/android-chrome-512x512.png" />
+    /* Vertical Timeline Styling */
+    .vertical-timeline {
+      position: relative;
+      margin: 20px 0;
+      padding-left: 30px;
+      border-left: 3px solid #ff6600;
+    }
+    .vertical-timeline-item {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -11px;
+      background-color: #ff6600;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .timeline-content {
+      margin-left: 30px;
+    }
+    .timeline-content h5 {
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    .timeline-content p {
+      margin-bottom: 0;
+    }
+
+    /* Note style for flexible scheduling */
+    .flexibility-note {
+      font-style: italic;
+      color: #6c757d;
+    }
+
+    /* Map container */
+    .map-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      border: 2px solid #ccc;
+    }
+    .map-container iframe {
+      width: 100%;
+      height: 450px;
+      pointer-events: none;
+    }
+
+    /* Fixed WhatsApp Icon Button (icon only, transparent background) */
+    .whatsapp-fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      text-decoration: none;
+    }
+    .whatsapp-fixed i {
+      color: #25D366;
+      font-size: 36px;
+    }
+  </style>
 </head>
 <body>
   <!-- Navigation -->
@@ -83,65 +164,227 @@
     </div>
   </nav>
 
-  <!-- Destinations Section with Alternating Boxes -->
+  <!-- Main Section: Escursioni e Servizi Shuttle -->
   <section class="py-5">
     <div class="container">
-      <h1 class="text-center mb-5" data-i18n="destinations.heading">Explore Our Destinations</h1>
+      <!-- Header and Intro Paragraph -->
+      <h1 class="text-center mb-4" data-i18n="escursioni.heading">Escursioni e Servizi Shuttle da Akrotiri/Chania</h1>
+      <p class="text-center mb-5" data-i18n="escursioni.paragraph">
+        Offriamo servizi privati di noleggio con conducente (NCC) e shuttle condivisi, con partenza esclusiva dalla zona di Akrotiri/Chania. Le nostre escursioni sono confortevoli, sicure e ideali per gruppi e famiglie. Prenotazione anticipata consigliata.
+      </p>
+
+      <!-- Day Trips Section -->
+      <h2 class="mb-4" data-i18n="dayTrips.heading">Day Trips</h2>
       
-      <!-- Destination Box 1: Chania (Image left, Text right) -->
+      <!-- Falasarna Box (Image left, Text right) -->
       <div class="row align-items-center mb-5" data-aos="fade-up">
         <div class="col-md-6">
-          <img src="Images/crete1.jpg" alt="Chania" class="img-fluid rounded">
+          <img src="Images/falassarna-top-1-1280.jpg" alt="Falasarna" class="img-fluid rounded" />
         </div>
         <div class="col-md-6">
-          <h2 data-i18n="destinations.chania.title">Chania</h2>
-          <p data-i18n="destinations.chania.description">
-            Explore the Venetian harbor, charming old town, and local markets.
-          </p>
+          <h3 data-i18n="dayTrips.falasarna.title">Falasarna - Beach Day (min 4 people)</h3>
+          <div class="price-box my-3">
+             <button type="button" class="btn btn-primary btn-lg" data-i18n="dayTrips.falasarna.price">50 € a persona</button>
+          </div>
+          <div class="structured-description">
+            <h4 data-i18n="dayTrips.falasarna.highlightsTitle">Highlights</h4>
+            <ul>
+              <li data-i18n="dayTrips.falasarna.highlight1">Discover one of the most iconic beaches on the west coast</li>
+              <li data-i18n="dayTrips.falasarna.highlight2">Enjoy spectacular sunsets</li>
+              <li data-i18n="dayTrips.falasarna.highlight3">Swim in turquoise, crystal-clear waters</li>
+              <li data-i18n="dayTrips.falasarna.highlight4">Stop at charming villages along the way</li>
+            </ul>
+            <h4 data-i18n="dayTrips.falasarna.fullDescriptionTitle">Full Description</h4>
+            <p data-i18n="dayTrips.falasarna.fullDescription">
+              Enjoy a trip to one of Crete’s most enchanting spots: Falasarna. Renowned for its golden sandy beach and turquoise sea, the transfer is provided in an air-conditioned minivan as a private service (min. 4 people), ensuring comfort throughout the journey. Relax, swim and sunbathe at your leisure.
+            </p>
+            <h4 data-i18n="dayTrips.falasarna.timelineTitle">Times & Itinerary</h4>
+            <div class="vertical-timeline">
+              <div class="vertical-timeline-item">
+                <div class="timeline-dot"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="timeline-content">
+                  <h5 data-i18n="dayTrips.falasarna.timeline.pickup">8:00-8:30 - Pick-up</h5>
+                  <p data-i18n="dayTrips.falasarna.timeline.pickupText">
+                    We’ll collect you from the Akrotiri/Chania area (multiple stops may be required).
+                  </p>
+                </div>
+              </div>
+              <div class="vertical-timeline-item">
+                <div class="timeline-dot"><i class="fas fa-car"></i></div>
+                <div class="timeline-content">
+                  <h5 data-i18n="dayTrips.falasarna.timeline.travel">10:00 - Arrival at Falasarna</h5>
+                  <p data-i18n="dayTrips.falasarna.timeline.travelText">
+                    Arrival at the beach with plenty of free time to relax and swim.
+                  </p>
+                </div>
+              </div>
+              <div class="vertical-timeline-item">
+                <div class="timeline-dot"><i class="fas fa-flag-checkered"></i></div>
+                <div class="timeline-content">
+                  <h5 data-i18n="dayTrips.falasarna.timeline.return">17:30 - Depart for Chania</h5>
+                  <p data-i18n="dayTrips.falasarna.timeline.returnText">
+                    Departure from Falasarna with drop-off at designated points in Chania by 19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h4 data-i18n="dayTrips.falasarna.includesTitle">Includes</h4>
+            <ul>
+              <li data-i18n="dayTrips.falasarna.include1">Transport in an air-conditioned minivan (Private Service)</li>
+              <li data-i18n="dayTrips.falasarna.include2">Experienced driver</li>
+              <li data-i18n="dayTrips.falasarna.include3">Pickup and drop-off from designated areas in Akrotiri/Chania</li>
+              <li data-i18n="dayTrips.falasarna.include4">Suggestions on local spots and restaurants</li>
+            </ul>
+          </div>
         </div>
       </div>
       
-      <!-- Destination Box 2: Rethymno (Image right, Text left) -->
+      <!-- Elafonisi Box (Image right, Text left) -->
       <div class="row align-items-center mb-5 flex-row-reverse" data-aos="fade-up">
         <div class="col-md-6">
-          <img src="Images/crete2.jpg" alt="Rethymno" class="img-fluid rounded">
+          <img src="Images/it_elafonisi.jpeg" alt="Elafonisi" class="img-fluid rounded" />
         </div>
         <div class="col-md-6">
-          <h2 data-i18n="destinations.rethymno.title">Rethymno</h2>
-          <p data-i18n="destinations.rethymno.description">
-            Discover the historic Fortezza, quaint streets, and hidden cafes.
-          </p>
+          <h3 data-i18n="dayTrips.elafonisi.title">Elafonisi - The Pink Sand Beach (min 4 people)</h3>
+          <div class="price-box my-3">
+             <button type="button" class="btn btn-primary btn-lg" data-i18n="dayTrips.elafonisi.price">50 € a persona</button>
+          </div>
+          <div class="structured-description">
+            <h4 data-i18n="dayTrips.elafonisi.highlightsTitle">Highlights</h4>
+            <ul>
+              <li data-i18n="dayTrips.elafonisi.highlight1">Spend a relaxing day on the pink sand beaches of Elafonisi</li>
+              <li data-i18n="dayTrips.elafonisi.highlight2">Swim in crystal-clear waters</li>
+              <li data-i18n="dayTrips.elafonisi.highlight3">Stroll in a protected area of outstanding natural beauty</li>
+              <li data-i18n="dayTrips.elafonisi.highlight4">Take in lush green landscapes through Topolia Gorge</li>
+            </ul>
+            <h4 data-i18n="dayTrips.elafonisi.fullDescriptionTitle">Full Description</h4>
+            <p data-i18n="dayTrips.elafonisi.fullDescription">
+              Following pickup by minivan, journey to the southwest corner of Crete to enjoy a private, relaxing day on the pink sand beaches of the small island of Elafonisi. Experience breathtaking natural surroundings with plenty of free time to swim, sunbathe and unwind.
+            </p>
+            <h4 data-i18n="dayTrips.elafonisi.timelineTitle">Times & Itinerary</h4>
+            <div class="vertical-timeline">
+              <div class="vertical-timeline-item">
+                <div class="timeline-dot"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="timeline-content">
+                  <h5 data-i18n="dayTrips.elafonisi.timeline.pickup">8:00-8:30 - Pick-up</h5>
+                  <p data-i18n="dayTrips.elafonisi.timeline.pickupText">
+                    We’ll collect you from the Akrotiri/Chania area (multiple stops may be required).
+                  </p>
+                </div>
+              </div>
+              <div class="vertical-timeline-item">
+                <div class="timeline-dot"><i class="fas fa-car"></i></div>
+                <div class="timeline-content">
+                  <h5 data-i18n="dayTrips.elafonisi.timeline.travel">10:30 - Arrival at Elafonisi</h5>
+                  <p data-i18n="dayTrips.elafonisi.timeline.travelText">
+                    Arrival at the beach with ample time to relax and swim.
+                  </p>
+                </div>
+              </div>
+              <div class="vertical-timeline-item">
+                <div class="timeline-dot"><i class="fas fa-flag-checkered"></i></div>
+                <div class="timeline-content">
+                  <h5 data-i18n="dayTrips.elafonisi.timeline.return">17:00 - Depart for Chania</h5>
+                  <p data-i18n="dayTrips.elafonisi.timeline.returnText">
+                    Departure from Elafonisi with drop-off at your designated location in Chania by 19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h4 data-i18n="dayTrips.elafonisi.includesTitle">Includes</h4>
+            <ul>
+              <li data-i18n="dayTrips.elafonisi.include1">Transport in an air-conditioned minivan (Private Service)</li>
+              <li data-i18n="dayTrips.elafonisi.include2">Experienced driver</li>
+              <li data-i18n="dayTrips.elafonisi.include3">Pickup and drop-off from designated areas in Akrotiri/Chania</li>
+              <li data-i18n="dayTrips.elafonisi.include4">Suggestions on local spots and restaurants</li>
+            </ul>
+          </div>
         </div>
       </div>
       
-      <!-- Destination Box 3: Elafonisi (Image left, Text right) -->
+      <!-- Custom Day Trips Box (Additional Day Trip) -->
       <div class="row align-items-center mb-5" data-aos="fade-up">
         <div class="col-md-6">
-          <img src="Images/crete3.jpg" alt="Elafonisi" class="img-fluid rounded">
+          <img src="Images/Seitan.jpg" alt="Other Destinations" class="img-fluid rounded" />
         </div>
         <div class="col-md-6">
-          <h2 data-i18n="destinations.elafonisi.title">Elafonisi</h2>
-          <p data-i18n="destinations.elafonisi.description">
-            Experience crystal-clear waters and pink sand beaches.
+          <h3 data-i18n="dayTrips.custom.title">And More (Customized Trips) (min 4 people)</h3>
+          <div class="price-box my-3">
+            <button type="button" class="btn btn-primary btn-lg" data-i18n="dayTrips.custom.price">On request</button>
+          </div>
+          <div class="structured-description">
+            <h4 data-i18n="dayTrips.custom.highlightsTitle">Highlights</h4>
+            <ul>
+              <li data-i18n="dayTrips.custom.highlight1">Additional beaches and destinations available upon request</li>
+              <li data-i18n="dayTrips.custom.highlight2">Tailor-made itineraries for a personalized experience</li>
+            </ul>
+            <h4 data-i18n="dayTrips.custom.fullDescriptionTitle">Full Description</h4>
+            <p data-i18n="dayTrips.custom.fullDescription">
+              Beyond our standard day trips, we can customize transfers and excursions to various parts of Crete – from secluded beaches to hidden local attractions. Contact us for personalized options.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Shuttle Services Section -->
+      <h2 class="mb-4" data-i18n="shuttle.heading">Shuttle Services</h2>
+      
+      <!-- Shuttle per Marathi Beach (Image left, Text right) -->
+      <div class="row align-items-center mb-5" data-aos="fade-up">
+        <div class="col-md-6">
+          <img src="Images/Chania_port.jpg" alt="Marathi Beach Shuttle" class="img-fluid rounded" />
+        </div>
+        <div class="col-md-6">
+          <h3 data-i18n="shuttle.marathi.title">Shuttle to Marathi Beach</h3>
+          <div class="price-box my-3">
+            <button type="button" class="btn btn-primary btn-lg" data-i18n="shuttle.marathi.price">40 € a persona</button>
+          </div>
+          <p data-i18n="shuttle.marathi.description">
+            A shared service in an air-conditioned minivan. Departure at 9:00 AM and return by 7:00 PM. Ideal for families (minimum 4 people).
+          </p>
+          <p class="flexibility-note" data-i18n="shuttle.flexibility">
+            *Pickup and drop-off times can be personalized and flexible upon request.*
           </p>
         </div>
       </div>
-      <!-- Add additional destination boxes following the same alternating pattern -->
       
+      <!-- Shuttle serale per Chania Centro (Image right, Text left) -->
+      <div class="row align-items-center mb-5 flex-row-reverse" data-aos="fade-up">
+        <div class="col-md-6">
+          <img src="Images/it_marathi.jpeg" alt="Chania Shuttle" class="img-fluid rounded" />
+        </div>
+        <div class="col-md-6">
+          <h3 data-i18n="shuttle.chania.title">Evening Shuttle to Chania Center</h3>
+          <div class="price-box my-3">
+            <button type="button" class="btn btn-primary btn-lg" data-i18n="shuttle.chania.price">25 € a persona</button>
+          </div>
+          <p data-i18n="shuttle.chania.description">
+            Perfect for a night out in town: dinner, a stroll along the Venetian port, or shopping. Depart at 8:30 PM, return by 12:30 AM. Shared service with a minimum of 4 people.
+          </p>
+          <p class="flexibility-note" data-i18n="shuttle.flexibility">
+            *Pickup and drop-off times can be personalized and flexible upon request.*
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
 
-<!-- Footer -->
-<footer class="bg-dark text-white py-4">
-  <div class="container text-center">
-    <p data-i18n="footer.copyright">© 2025 Ioulia's Tour</p>
-    <p data-i18n="footer.contact">Contact: +30 123 456 789 | info@iouliastour.com</p>
-    <!-- WhatsApp Icon Link using Font Awesome -->
-    <a href="whatsapp://send?phone=15551234567" target="_blank" title="Chat with us on WhatsApp">
-      <i class="fab fa-whatsapp fa-2x" style="color: #25D366;"></i>
-    </a>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+      <p data-i18n="footer.copyright">© 2025 Ioulia's Tour</p>
+      <p data-i18n="footer.contact">Contact: +30 6942818200 | contact.iouliastour@gmail.com</p>
+      <a href="whatsapp://send?phone=306942818200" target="_blank" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp fa-2x" style="color: #25D366;"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Fixed WhatsApp Icon Button -->
+  <a href="whatsapp://send?phone=306942818200" class="whatsapp-fixed" target="_blank" title="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -154,7 +397,6 @@
   <!-- i18next Initialization and Language Switcher Script -->
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-      // Translation resources
       const resources = {
         en: {
           translation: {
@@ -166,30 +408,95 @@
               destinations: "Destinations",
               contact: "Contact"
             },
-            destinations: {
-              heading: "Explore Our Destinations",
-              chania: {
-                title: "Chania",
-                description: "Explore the Venetian harbor, charming old town, and local markets."
-              },
-              rethymno: {
-                title: "Rethymno",
-                description: "Discover the historic Fortezza, quaint streets, and hidden cafes."
+            escursioni: {
+              heading: "Escursioni e Servizi Shuttle da Akrotiri/Chania",
+              paragraph: "We offer private chauffeured transport (NCC) and shared shuttle services exclusively from the Akrotiri/Chania area. Our excursions are comfortable, safe and ideal for groups and families. Advance booking is recommended."
+            },
+            dayTrips: {
+              heading: "Day Trips",
+              falasarna: {
+                title: "Falasarna - Beach Day (min 4 people)",
+                price: "€50 per person",
+                highlightsTitle: "Highlights",
+                highlight1: "Discover one of the most iconic beaches on the west coast",
+                highlight2: "Enjoy spectacular sunsets",
+                highlight3: "Swim in turquoise, crystal-clear waters",
+                highlight4: "Stop at charming villages along the way",
+                fullDescriptionTitle: "Full Description",
+                fullDescription: "Enjoy a trip to one of Crete’s most enchanting spots: Falasarna. Renowned for its golden sandy beach and turquoise sea, the transfer is provided in an air-conditioned minivan as a private service (min. 4 people), ensuring comfort throughout the journey. Relax, swim and sunbathe at your leisure.",
+                timelineTitle: "Times & Itinerary",
+                timeline: {
+                  pickup: "8:00-8:30 - Pick-up",
+                  pickupText: "We’ll collect you from the Akrotiri/Chania area (multiple stops may be required).",
+                  travel: "10:00 - Arrival at Falasarna",
+                  travelText: "Arrival at the beach with plenty of free time to relax and swim.",
+                  return: "17:30 - Depart for Chania",
+                  returnText: "Departure from Falasarna with drop-off at designated points in Chania by 19:00."
+                },
+                includesTitle: "Includes",
+                include1: "Transport in an air-conditioned minivan (Private Service)",
+                include2: "Experienced driver",
+                include3: "Pickup and drop-off from designated areas in Akrotiri/Chania",
+                include4: "Suggestions on local spots and restaurants"
               },
               elafonisi: {
-                title: "Elafonisi",
-                description: "Experience crystal-clear waters and pink sand beaches."
+                title: "Elafonisi - The Pink Sand Beach (min 4 people)",
+                price: "€50 per person",
+                highlightsTitle: "Highlights",
+                highlight1: "Spend a relaxing day on the pink sand beaches of Elafonisi",
+                highlight2: "Swim in crystal-clear waters",
+                highlight3: "Stroll in a protected area of outstanding natural beauty",
+                highlight4: "Take in lush green landscapes through Topolia Gorge",
+                fullDescriptionTitle: "Full Description",
+                fullDescription: "Following pickup by minivan, journey to the southwest corner of Crete to enjoy a private, relaxing day on the pink sand beaches of the small island of Elafonisi. Experience breathtaking natural surroundings with plenty of free time to swim, sunbathe and unwind.",
+                timelineTitle: "Times & Itinerary",
+                timeline: {
+                  pickup: "8:00-8:30 - Pick-up",
+                  pickupText: "We’ll collect you from the Akrotiri/Chania area (multiple stops may be required).",
+                  travel: "10:30 - Arrival at Elafonisi",
+                  travelText: "Arrival at the beach with ample time to relax and swim.",
+                  return: "17:00 - Depart for Chania",
+                  returnText: "Departure from Elafonisi with drop-off at your designated location in Chania by 19:00."
+                },
+                includesTitle: "Includes",
+                include1: "Transport in an air-conditioned minivan (Private Service)",
+                include2: "Experienced driver",
+                include3: "Pickup and drop-off from designated areas in Akrotiri/Chania",
+                include4: "Suggestions on local spots and restaurants"
+              },
+              custom: {
+                title: "And More (Customized Trips) (min 4 people)",
+                price: "On request",
+                highlightsTitle: "Highlights",
+                highlight1: "Additional beaches and destinations available upon request",
+                highlight2: "Tailor-made itineraries for a personalized experience",
+                fullDescriptionTitle: "Full Description",
+                fullDescription: "Beyond our standard day trips, we can customize transfers and excursions to various parts of Crete – from secluded beaches to hidden local attractions. Contact us for personalized options."
               }
+            },
+            shuttle: {
+              heading: "Shuttle Services",
+              marathi: {
+                title: "Shuttle to Marathi Beach",
+                price: "€40 per person",
+                description: "A shared service in an air-conditioned minivan. Departure at 9:00 AM and return by 7:00 PM. Ideal for families (minimum 4 people)."
+              },
+              chania: {
+                title: "Evening Shuttle to Chania Center",
+                price: "€25 per person",
+                description: "Perfect for a night out in town: dinner, a stroll along the Venetian port, or shopping. Depart at 8:30 PM, return by 12:30 AM. Shared service with a minimum of 4 people."
+              },
+              flexibility: "*Pickup and drop-off times can be personalized and flexible upon request.*"
             },
             footer: {
               copyright: "© 2025 Ioulia's Tour",
-              contact: "Contact: +30 123 456 789 | info@iouliastour.com"
+              contact: "Contact: +30 6942818200 | contact.iouliastour@gmail.com"
             }
           }
         },
         it: {
           translation: {
-            pageTitle: "Ioulia's Tour - Destinations",
+            pageTitle: "Ioulia's Tour - Destinazioni",
             nav: {
               home: "Home",
               about: "Chi Siamo",
@@ -197,24 +504,89 @@
               destinations: "Destinazioni",
               contact: "Contatto"
             },
-            destinations: {
-              heading: "Esplora le Nostre Destinazioni",
-              chania: {
-                title: "Chania",
-                description: "Esplora il porto veneziano, il centro storico e i mercati locali."
-              },
-              rethymno: {
-                title: "Rethymno",
-                description: "Scopri la storica Fortezza, i vicoli pittoreschi e i caffè nascosti."
+            escursioni: {
+              heading: "Escursioni e Servizi Shuttle da Akrotiri/Chania",
+              paragraph: "Offriamo servizi privati di noleggio con conducente (NCC) e shuttle condivisi, con partenza esclusiva dalla zona di Akrotiri/Chania. Le nostre escursioni sono confortevoli, sicure e ideali per gruppi e famiglie. Prenotazione anticipata consigliata."
+            },
+            dayTrips: {
+              heading: "Day Trips",
+              falasarna: {
+                title: "Falasarna - Giornata al mare (min. 4 persone)",
+                price: "50 € a persona",
+                highlightsTitle: "Highlights",
+                highlight1: "Scopri una delle spiagge più iconiche della costa ovest",
+                highlight2: "Goditi tramonti spettacolari",
+                highlight3: "Nuota in acque turchesi e cristalline",
+                highlight4: "Sosta in villaggi caratteristici lungo il percorso",
+                fullDescriptionTitle: "Descrizione Completa",
+                fullDescription: "Goditi un viaggio verso Falasarna, uno degli angoli più suggestivi di Creta, rinomato per la sua spiaggia di sabbia dorata e il mare turchese. Il trasferimento avviene in un minivan climatizzato, garantendo un servizio privato (min. 4 persone) e confortevole. Avrai ampio tempo per rilassarti, nuotare e prendere il sole.",
+                timelineTitle: "Orari & Itinerario",
+                timeline: {
+                  pickup: "8:00-8:30 - Pick-up",
+                  pickupText: "Ti preleviamo direttamente dalla zona di Akrotiri/Chania (con eventuali fermate multiple).",
+                  travel: "10:00 - Arrivo a Falasarna",
+                  travelText: "Arrivo in spiaggia con ampio tempo per rilassarti e nuotare.",
+                  return: "17:30 - Partenza per Chania",
+                  returnText: "Partenza da Falasarna con drop-off nei punti designati a Chania entro le 19:00."
+                },
+                includesTitle: "Include",
+                include1: "Trasporto con minivan climatizzato (Servizio Privato)",
+                include2: "Autista esperto",
+                include3: "Pick-up e drop-off nella zona di Akrotiri/Chania",
+                include4: "Suggerimenti su posti e ristoranti locali"
               },
               elafonisi: {
-                title: "Elafonisi",
-                description: "Vivi l'esperienza di acque cristalline e spiagge di sabbia rosa."
+                title: "Elafonisi - La spiaggia rosa (min. 4 persone)",
+                price: "50 € a persona",
+                highlightsTitle: "Highlights",
+                highlight1: "Trascorri una giornata rilassante sulle sabbie rosa",
+                highlight2: "Nuota in acque cristalline",
+                highlight3: "Passeggia in un'area protetta di grande bellezza",
+                highlight4: "Ammira paesaggi verdi lungo la Gola di Topolia",
+                fullDescriptionTitle: "Descrizione Completa",
+                fullDescription: "Dopo il pick-up in minivan, parti per l'angolo sud-occidentale della Creta per trascorrere una giornata privata sulle sabbie rosa dell’isola di Elafonisi. Il servizio in minivan climatizzato garantisce comfort e privacy, offrendoti tempo libero per rilassarti, nuotare e goderti il panorama.",
+                timelineTitle: "Orari & Itinerario",
+                timeline: {
+                  pickup: "8:00-8:30 - Pick-up",
+                  pickupText: "Ti preleviamo dalla zona di Akrotiri/Chania (con eventuali fermate multiple).",
+                  travel: "10:30 - Arrivo a Elafonisi",
+                  travelText: "Arrivo in spiaggia con tempo sufficiente per rilassarti e nuotare.",
+                  return: "17:00 - Partenza per Chania",
+                  returnText: "Partenza da Elafonisi con drop-off nel punto designato a Chania entro le 19:00."
+                },
+                includesTitle: "Include",
+                include1: "Trasporto con minivan climatizzato (Servizio Privato)",
+                include2: "Autista esperto",
+                include3: "Pick-up e drop-off da aree designate nella zona di Akrotiri/Chania",
+                include4: "Suggerimenti su posti e ristoranti locali"
+              },
+              custom: {
+                title: "And More (Customized Trips) (min 4 people)",
+                price: "On request",
+                highlightsTitle: "Highlights",
+                highlight1: "Additional beaches and destinations available upon request",
+                highlight2: "Tailor-made itineraries for a personalized experience",
+                fullDescriptionTitle: "Full Description",
+                fullDescription: "Beyond our standard day trips, we can customize transfers and excursions to various parts of Crete – from secluded beaches to hidden local attractions. Contact us for personalized options."
               }
+            },
+            shuttle: {
+              heading: "Shuttle Services",
+              marathi: {
+                title: "Shuttle per Marathi Beach",
+                price: "40 € a persona",
+                description: "Servizio condiviso in minivan climatizzato. Partenza ore 9:00, rientro entro le 19:00. Ideale per famiglie, minimo 4 persone."
+              },
+              chania: {
+                title: "Shuttle serale per Chania Centro",
+                price: "25 € a persona",
+                description: "Ideale per una serata in città: cena, passeggiata nel porto veneziano o shopping. Partenza ore 8:30, rientro entro le 00:30. Servizio condiviso con minimo 4 persone."
+              },
+              flexibility: "*Orari personalizzabili e flessibili in base alle esigenze del cliente.*"
             },
             footer: {
               copyright: "© 2025 Ioulia's Tour",
-              contact: "Contatto: +30 123 456 789 | info@iouliastour.com"
+              contact: "Contact: +30 6942818200 | contact.iouliastour@gmail.com"
             }
           }
         },
@@ -228,76 +600,329 @@
               destinations: "Προορισμοί",
               contact: "Επικοινωνία"
             },
-            destinations: {
-              heading: "Ανακαλύψτε τους Προορισμούς μας",
-              chania: {
-                title: "Χανιά",
-                description: "Εξερευνήστε το βενετσιάνικο λιμάνι, την παραδοσιακή παλιά πόλη και τις τοπικές αγορές."
-              },
-              rethymno: {
-                title: "Ρέθυμνο",
-                description: "Ανακαλύψτε τη ιστορική Φορτετζά, τα γραφικά σοκάκια και τα κρυμμένα καφέ."
+            escursioni: {
+              heading: "Escursioni e Servizi Shuttle da Akrotiri/Chania",
+              paragraph: "Προσφέρουμε ιδιωτικές υπηρεσίες μεταφοράς (NCC) και κοινόχρηστα shuttle, με αναχώρηση αποκλειστικά από την περιοχή Akrotiri/Chania. Οι εκδρομές μας είναι άνετες, ασφαλείς και ιδανικές για ομάδες και οικογένειες. Συνιστάται κράτηση εκ των προτέρων."
+            },
+            dayTrips: {
+              heading: "Day Trips",
+              falasarna: {
+                title: "Falasarna - Ημέρα στη θάλασσα (min 4 people)",
+                price: "50 € ανά άτομο",
+                highlightsTitle: "Highlights",
+                highlight1: "Ανακαλύψτε μία από τις πιο εμβληματικές παραλίες της δυτικής ακτής",
+                highlight2: "Απολαύστε θεαματικά ηλιοβασιλέματα",
+                highlight3: "Κολυμπήστε σε κρυστάλλινα νερά",
+                highlight4: "Σταματήστε σε γραφικά χωριά καθ’ οδόν",
+                fullDescriptionTitle: "Πλήρης Περιγραφή",
+                fullDescription: "Απολαύστε ένα ταξίδι στο Φαλάσαρνα, ένα από τα πιο μαγευτικά σημεία της Κρήτης, φημισμένο για την αμμώδη χρυσή παραλία και τα γαλαζοπράσινα νερά του. Η μεταφορά πραγματοποιείται με κλιματιζόμενο minivan (Ιδιωτική Υπηρεσία) με ελάχιστους 4 επιβάτες, προσφέροντάς σας άνεση και προσωπική εμπειρία. Απολαύστε τον χρόνο σας στην παραλία με δυνατότητα για χαλάρωση και κολύμπι.",
+                timelineTitle: "Ωράρια & Διαδρομή",
+                timeline: {
+                  pickup: "8:00-8:30 - Παραλαβή",
+                  pickupText: "Θα σας παραλάβουμε από την περιοχή Akrotiri/Chania (με πιθανές πολλαπλές στάσεις).",
+                  travel: "10:00 - Άφιξη στο Φαλάσαρνα",
+                  travelText: "Άφιξη στην παραλία, όπου θα έχετε αρκετό χρόνο για χαλάρωση και κολύμπι.",
+                  return: "17:30 - Αναχώρηση για Χανιά",
+                  returnText: "Αναχώρηση για Χανιά με απόθεση στο προκαθορισμένο σημείο έως τις 19:00."
+                },
+                includesTitle: "Περιλαμβάνει",
+                include1: "Trasporto con minivan climatizzato (Servizio Privato)",
+                include2: "Autista esperto",
+                include3: "Pick-up e drop-off nella zona di Akrotiri/Chania",
+                include4: "Suggerimenti su posti e ristoranti locali"
               },
               elafonisi: {
-                title: "Ελαφόνησι",
-                description: "Ζήστε την εμπειρία των κρυστάλλινων νερών και των ροζ παραλιών."
+                title: "Elafonisi - Η παραλία με ροζ άμμο (min 4 people)",
+                price: "50 € ανά άτομο",
+                highlightsTitle: "Highlights",
+                highlight1: "Περάστε μια χαλαρωτική μέρα στις ροζ αμμουδιές του Elafonisi",
+                highlight2: "Κολυμπήστε σε κρυστάλλινα νερά",
+                highlight3: "Περπατήστε σε μια προστατευόμενη περιοχή εξαιρετικής φυσικής ομορφιάς",
+                highlight4: "Απολαύστε καταπράσινα τοπία κατά την διαδρομή",
+                fullDescriptionTitle: "Πλήρης Περιγραφή",
+                fullDescription: "Μετά την παραλαβή με minivan, ξεκινήστε για το Elafonisi για να περάσετε μια ιδιωτική και χαλαρωτική μέρα στις ροζ αμμουδιές του μικρού νησιού. Η μεταφορά πραγματοποιείται με κλιματιζόμενο minivan (Ιδιωτική Υπηρεσία), ώστε να απολαύσετε άνετα τον χρόνο σας, ν' απολαύσετε το κολύμπι, τον ήλιο και το φυσικό τοπίο.",
+                timelineTitle: "Ωράρια & Διαδρομή",
+                timeline: {
+                  pickup: "8:00-8:30 - Παραλαβή",
+                  pickupText: "Θα σας παραλάβουμε από την περιοχή Akrotiri/Chania (με πιθανές πολλαπλές στάσεις).",
+                  travel: "10:30 - Άφιξη στο Elafonisi",
+                  travelText: "Άφιξη στην παραλία με αρκετό χρόνο για χαλάρωση και κολύμβηση.",
+                  return: "17:00 - Αναχώρηση για Χανιά",
+                  returnText: "Αναχώρηση από το Elafonisi με απόθεση στο προκαθορισμένο σημείο στα Χανιά έως τις 19:00."
+                },
+                includesTitle: "Περιλαμβάνει",
+                include1: "Trasporto con minivan climatizzato (Servizio Privato)",
+                include2: "Autista esperto",
+                include3: "Pick-up e drop-off da aree designate nella zona di Akrotiri/Chania",
+                include4: "Suggerimenti su posti e ristoranti locali"
+              },
+              custom: {
+                title: "And More (Customized Trips) (min 4 people)",
+                price: "On request",
+                highlightsTitle: "Highlights",
+                highlight1: "Additional beaches and destinations available upon request",
+                highlight2: "Tailor-made itineraries for a personalized experience",
+                fullDescriptionTitle: "Full Description",
+                fullDescription: "Beyond our standard day trips, we can customize transfers and excursions to various parts of Crete – from secluded beaches to hidden local attractions. Contact us for personalized options."
               }
+            },
+            shuttle: {
+              heading: "Shuttle Services",
+              marathi: {
+                title: "Shuttle to Marathi Beach",
+                price: "€40 per person",
+                description: "A shared service in an air-conditioned minivan. Departure at 9:00 AM and return by 7:00 PM. Ideal for families (minimum 4 people)."
+              },
+              chania: {
+                title: "Evening Shuttle to Chania Center",
+                price: "€25 per person",
+                description: "Perfect for a night out in town: dinner, a stroll along the Venetian port, or shopping. Depart at 8:30 PM, return by 12:30 AM. Shared service with a minimum of 4 people."
+              },
+              flexibility: "*Pickup and drop-off times can be personalized and flexible upon request.*"
             },
             footer: {
               copyright: "© 2025 Ioulia's Tour",
-              contact: "Επικοινωνία: +30 123 456 789 | info@iouliastour.com"
+              contact: "Contact: +30 6942818200 | contact.iouliastour@gmail.com"
+            }
+          }
+        },
+        it: {
+          translation: {
+            pageTitle: "Ioulia's Tour - Destinazioni",
+            nav: {
+              home: "Home",
+              about: "Chi Siamo",
+              transfers: "Trasferimenti",
+              destinations: "Destinazioni",
+              contact: "Contatto"
+            },
+            escursioni: {
+              heading: "Escursioni e Servizi Shuttle da Akrotiri/Chania",
+              paragraph: "Offriamo servizi privati di noleggio con conducente (NCC) e shuttle condivisi, con partenza esclusiva dalla zona di Akrotiri/Chania. Le nostre escursioni sono confortevoli, sicure e ideali per gruppi e famiglie. Prenotazione anticipata consigliata."
+            },
+            dayTrips: {
+              heading: "Day Trips",
+              falasarna: {
+                title: "Falasarna - Giornata al mare (min. 4 persone)",
+                price: "50 € a persona",
+                highlightsTitle: "Highlights",
+                highlight1: "Scopri una delle spiagge più iconiche della costa ovest",
+                highlight2: "Goditi tramonti spettacolari",
+                highlight3: "Nuota in acque turchesi e cristalline",
+                highlight4: "Sosta in villaggi caratteristici lungo il percorso",
+                fullDescriptionTitle: "Descrizione Completa",
+                fullDescription: "Goditi un viaggio verso Falasarna, uno degli angoli più suggestivi di Creta, rinomato per la sua spiaggia di sabbia dorata e il mare turchese. Il trasferimento avviene in un minivan climatizzato, garantendo un servizio privato (min. 4 persone) e confortevole. Avrai ampio tempo per rilassarti, nuotare e prendere il sole.",
+                timelineTitle: "Orari & Itinerario",
+                timeline: {
+                  pickup: "8:00-8:30 - Pick-up",
+                  pickupText: "Ti preleviamo direttamente dalla zona di Akrotiri/Chania (con eventuali fermate multiple).",
+                  travel: "10:00 - Arrivo a Falasarna",
+                  travelText: "Arrivo in spiaggia con ampio tempo per rilassarti e nuotare.",
+                  return: "17:30 - Partenza per Chania",
+                  returnText: "Partenza da Falasarna con drop-off nei punti designati a Chania entro le 19:00."
+                },
+                includesTitle: "Include",
+                include1: "Trasporto con minivan climatizzato (Servizio Privato)",
+                include2: "Autista esperto",
+                include3: "Pick-up e drop-off nella zona di Akrotiri/Chania",
+                include4: "Suggerimenti su posti e ristoranti locali"
+              },
+              elafonisi: {
+                title: "Elafonisi - La spiaggia rosa (min. 4 persone)",
+                price: "50 € a persona",
+                highlightsTitle: "Highlights",
+                highlight1: "Trascorri una giornata rilassante sulle sabbie rosa",
+                highlight2: "Nuota in acque cristalline",
+                highlight3: "Passeggia in un'area protetta di grande bellezza",
+                highlight4: "Ammira paesaggi verdi lungo la Gola di Topolia",
+                fullDescriptionTitle: "Descrizione Completa",
+                fullDescription: "Dopo il pick-up in minivan, parti per l'angolo sud-occidentale della Creta per trascorrere una giornata privata sulle sabbie rosa dell’isola di Elafonisi. Il servizio in minivan climatizzato garantisce comfort e privacy, offrendoti tempo libero per rilassarti, nuotare e goderti il panorama.",
+                timelineTitle: "Orari & Itinerario",
+                timeline: {
+                  pickup: "8:00-8:30 - Pick-up",
+                  pickupText: "Ti preleviamo dalla zona di Akrotiri/Chania (con eventuali fermate multiple).",
+                  travel: "10:30 - Arrivo a Elafonisi",
+                  travelText: "Arrivo in spiaggia con tempo sufficiente per rilassarti e nuotare.",
+                  return: "17:00 - Partenza per Chania",
+                  returnText: "Partenza da Elafonisi con drop-off nel punto designato a Chania entro le 19:00."
+                },
+                includesTitle: "Include",
+                include1: "Trasporto con minivan climatizzato (Servizio Privato)",
+                include2: "Autista esperto",
+                include3: "Pick-up e drop-off da aree designate nella zona di Akrotiri/Chania",
+                include4: "Suggerimenti su posti e ristoranti locali"
+              },
+              custom: {
+                title: "And More (Customized Trips) (min 4 people)",
+                price: "On request",
+                highlightsTitle: "Highlights",
+                highlight1: "Additional beaches and destinations available upon request",
+                highlight2: "Tailor-made itineraries for a personalized experience",
+                fullDescriptionTitle: "Descrizione Completa",
+                fullDescription: "Oltre ai nostri day trips standard, possiamo organizzare trasferimenti ed escursioni personalizzate in qualsiasi parte della Creta – dalle spiagge appartate agli angoli nascosti dell'isola. Contattaci per opzioni su misura."
+              }
+            },
+            shuttle: {
+              heading: "Shuttle Services",
+              marathi: {
+                title: "Shuttle per Marathi Beach",
+                price: "40 € a persona",
+                description: "Servizio condiviso in minivan climatizzato. Partenza ore 9:00, rientro entro le 19:00. Ideale per famiglie, minimo 4 persone."
+              },
+              chania: {
+                title: "Shuttle serale per Chania Centro",
+                price: "25 € a persona",
+                description: "Ideale per una serata in città: cena, passeggiata nel porto veneziano o shopping. Partenza ore 8:30, rientro entro le 00:30. Servizio condiviso con minimo 4 persone."
+              },
+              flexibility: "*Orari personalizzabili e flessibili in base alle esigenze del cliente.*"
+            },
+            footer: {
+              copyright: "© 2025 Ioulia's Tour",
+              contact: "Contatto: +30 6942818200 | contact.iouliastour@gmail.com"
+            }
+          }
+        },
+        el: {
+          translation: {
+            pageTitle: "Ioulia's Tour - Destinations",
+            nav: {
+              home: "Αρχική",
+              about: "Σχετικά με εμάς",
+              transfers: "Μεταφορές",
+              destinations: "Προορισμοί",
+              contact: "Επικοινωνία"
+            },
+            escursioni: {
+              heading: "Escursioni e Servizi Shuttle da Akrotiri/Chania",
+              paragraph: "Προσφέρουμε ιδιωτικές υπηρεσίες μεταφοράς (NCC) και κοινόχρηστα shuttle, με αναχώρηση αποκλειστικά από την περιοχή Akrotiri/Chania. Οι εκδρομές μας είναι άνετες, ασφαλείς και ιδανικές για ομάδες και οικογένειες. Συνιστάται κράτηση εκ των προτέρων."
+            },
+            dayTrips: {
+              heading: "Day Trips",
+              falasarna: {
+                title: "Falasarna - Ημέρα στη θάλασσα (min 4 people)",
+                price: "50 € ανά άτομο",
+                highlightsTitle: "Highlights",
+                highlight1: "Ανακαλύψτε μία από τις πιο εμβληματικές παραλίες της δυτικής ακτής",
+                highlight2: "Απολαύστε θεαματικά ηλιοβασιλέματα",
+                highlight3: "Κολυμπήστε σε κρυστάλλινα νερά",
+                highlight4: "Σταματήστε σε γραφικά χωριά καθ’ οδόν",
+                fullDescriptionTitle: "Πλήρης Περιγραφή",
+                fullDescription: "Απολαύστε ένα ταξίδι στο Φαλάσαρνα, ένα από τα πιο μαγευτικά σημεία της Κρήτης, φημισμένο για την αμμώδη χρυσή παραλία και τα γαλαζοπράσινα νερά του. Η μεταφορά πραγματοποιείται με κλιματιζόμενο minivan (Ιδιωτική Υπηρεσία) με ελάχιστους 4 επιβάτες, προσφέροντάς σας άνεση και προσωπική εμπειρία. Απολαύστε τον χρόνο σας στην παραλία με δυνατότητα για χαλάρωση και κολύμπι.",
+                timelineTitle: "Ωράρια & Διαδρομή",
+                timeline: {
+                  pickup: "8:00-8:30 - Παραλαβή",
+                  pickupText: "Θα σας παραλάβουμε από την περιοχή Akrotiri/Chania (με πιθανές πολλαπλές στάσεις).",
+                  travel: "10:00 - Άφιξη στο Φαλάσαρνα",
+                  travelText: "Άφιξη στην παραλία, όπου θα έχετε αρκετό χρόνο για χαλάρωση και κολύμπι.",
+                  return: "17:30 - Αναχώρηση για Χανιά",
+                  returnText: "Αναχώρηση για Χανιά με απόθεση στο προκαθορισμένο σημείο έως τις 19:00."
+                },
+                includesTitle: "Περιλαμβάνει",
+                include1: "Trasporto con minivan climatizzato (Servizio Privato)",
+                include2: "Autista esperto",
+                include3: "Pick-up e drop-off nella zona di Akrotiri/Chania",
+                include4: "Suggerimenti su posti e ristoranti locali"
+              },
+              elafonisi: {
+                title: "Elafonisi - Η παραλία με ροζ άμμο (min 4 people)",
+                price: "50 € a persona",
+                highlightsTitle: "Highlights",
+                highlight1: "Περάστε μια χαλαρωτική μέρα στις ροζ αμμουδιές του Elafonisi",
+                highlight2: "Κολυμπήστε σε κρυστάλλινα νερά",
+                highlight3: "Περπατήστε σε μια προστατευόμενη περιοχή εξαιρετικής φυσικής ομορφιάς",
+                highlight4: "Απολαύστε καταπράσινα τοπία κατά την διαδρομή",
+                fullDescriptionTitle: "Πλήρης Περιγραφή",
+                fullDescription: "Μετά την παραλαβή με minivan, ξεκινήστε για το Elafonisi για να περάσετε μια ιδιωτική και χαλαρωτική μέρα στις ροζ αμμουδιές του μικρού νησιού. Η μεταφορά πραγματοποιείται με κλιματιζόμενο minivan (Ιδιωτική Υπηρεσία), ώστε να απολαύσετε άνετα τον χρόνο σας, ν' απολαύσετε το κολύμπι, τον ήλιο και το φυσικό τοπίο.",
+                timelineTitle: "Ωράρια & Διαδρομή",
+                timeline: {
+                  pickup: "8:00-8:30 - Παραλαβή",
+                  pickupText: "Θα σας παραλάβουμε από την περιοχή Akrotiri/Chania (με πιθανές πολλαπλές στάσεις).",
+                  travel: "10:30 - Άφιξη στο Elafonisi",
+                  travelText: "Άφιξη στην παραλία με αρκετό χρόνο για χαλάρωση και κολύμβηση.",
+                  return: "17:00 - Αναχώρηση για Χανιά",
+                  returnText: "Αναχώρηση από το Elafonisi με απόθεση στο προκαθορισμένο σημείο στα Χανιά έως τις 19:00."
+                },
+                includesTitle: "Περιλαμβάνει",
+                include1: "Trasporto con minivan climatizzato (Servizio Privato)",
+                include2: "Autista esperto",
+                include3: "Pick-up e drop-off da aree designate nella zona di Akrotiri/Chania",
+                include4: "Suggerimenti su posti e ristoranti locali"
+              },
+              custom: {
+                title: "And More (Customized Trips) (min 4 people)",
+                price: "On request",
+                highlightsTitle: "Highlights",
+                highlight1: "Additional beaches and destinations available upon request",
+                highlight2: "Tailor-made itineraries for a personalized experience",
+                fullDescriptionTitle: "Full Description",
+                fullDescription: "Beyond our standard day trips, we can customize transfers and excursions to various parts of Crete – from secluded beaches to hidden local attractions. Contact us for personalized options."
+              }
+            },
+            shuttle: {
+              heading: "Shuttle Services",
+              marathi: {
+                title: "Shuttle to Marathi Beach",
+                price: "€40 per person",
+                description: "A shared service in an air-conditioned minivan. Departure at 9:00 AM and return by 7:00 PM. Ideal for families (minimum 4 people)."
+              },
+              chania: {
+                title: "Evening Shuttle to Chania Center",
+                price: "€25 per person",
+                description: "Perfect for a night out in town: dinner, a stroll along the Venetian port, or shopping. Depart at 8:30 PM, return by 12:30 AM. Shared service with a minimum of 4 people."
+              },
+              flexibility: "*Pickup and drop-off times can be personalized and flexible upon request.*"
+            },
+            footer: {
+              copyright: "© 2025 Ioulia's Tour",
+              contact: "Contact: +30 6942818200 | contact.iouliastour@gmail.com"
             }
           }
         }
       };
 
-      // Initialize i18next
       i18next.init({
-        lng: localStorage.getItem('lng') || 'en',
-        debug: false,
-        resources: resources
+        lng: localStorage.getItem("lng") || "en",
+        resources: resources,
       }).then(() => {
         updateContent();
         updateCurrentLangDisplay();
       });
 
-      // Mapping for language display info (flag and text)
       const langData = {
         en: { name: "English", flag: "Images/Flags/english.png" },
         it: { name: "Italiano", flag: "Images/Flags/italy.png" },
-        el: { name: "Ελληνικά", flag: "Images/Flags/greek.png" }
+        el: { name: "Ελληνικά", flag: "Images/Flags/greek.png" },
       };
 
-      // Update current language display
       function updateCurrentLangDisplay() {
         const currentLang = i18next.language;
         const langInfo = langData[currentLang] || langData.en;
-        document.getElementById('currentLang').textContent = langInfo.name;
-        document.getElementById('currentFlag').src = langInfo.flag;
+        document.getElementById("currentLang").textContent = langInfo.name;
+        document.getElementById("currentFlag").src = langInfo.flag;
       }
 
-      // Update translated content
       function updateContent() {
-        document.title = i18next.t('pageTitle');
-        document.querySelectorAll('[data-i18n]').forEach(element => {
-          const key = element.getAttribute('data-i18n');
+        document.title = i18next.t("pageTitle");
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          const key = element.getAttribute("data-i18n");
           element.textContent = i18next.t(key);
         });
         updateCurrentLangDisplay();
       }
 
-      // Language switcher event listener
-      document.querySelectorAll('.lang-switch').forEach(el => {
-        el.addEventListener('click', (e) => {
+      document.querySelectorAll(".lang-switch").forEach((el) => {
+        el.addEventListener("click", (e) => {
           e.preventDefault();
-          const lang = e.currentTarget.getAttribute('data-lang');
+          const lang = e.target.closest("a").dataset.lang;
           i18next.changeLanguage(lang, () => {
-            localStorage.setItem('lng', lang);
+            localStorage.setItem("lng", lang);
             updateContent();
+            updateCurrentLangDisplay();
           });
         });
       });
     });
   </script>
+
 </body>
 </html>
