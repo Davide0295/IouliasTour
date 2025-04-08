@@ -88,17 +88,24 @@
       pointer-events: none;
     }
 
-    /* Fixed WhatsApp Icon Button (icon only, transparent background) */
+    /* Fixed WhatsApp Icon Button - Round, green background, white icon */
     .whatsapp-fixed {
       position: fixed;
       bottom: 20px;
-      right: 20px;
+      right: 15px; /* slightly further from the right edge */
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       z-index: 9999;
       text-decoration: none;
     }
     .whatsapp-fixed i {
-      color: #25D366;
-      font-size: 36px;
+      color: #fff;
+      font-size: 38px; /* slightly larger icon */
     }
   </style>
 </head>

@@ -90,17 +90,24 @@
       pointer-events: none;
     }
 
-    /* Fixed WhatsApp Icon Button (icon only, transparent background) */
+    /* Fixed WhatsApp Icon Button - Round, green background, white icon */
     .whatsapp-fixed {
       position: fixed;
       bottom: 20px;
-      right: 20px;
+      right: 15px; /* slightly further from the right edge */
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       z-index: 9999;
       text-decoration: none;
     }
     .whatsapp-fixed i {
-      color: #25D366;
-      font-size: 36px;
+      color: #fff;
+      font-size: 38px; /* slightly larger icon */
     }
   </style>
 </head>
@@ -247,7 +254,7 @@
         <div class="col-md-6">
           <h3 data-i18n="dayTrips.elafonisi.title">Elafonisi - The Pink Sand Beach (min 4 people)</h3>
           <div class="price-box my-3">
-             <button type="button" class="btn btn-primary btn-lg" data-i18n="dayTrips.elafonisi.price">50 € a persona</button>
+             <button type="button" class="btn btn-primary btn-lg" data-i18n="dayTrips.elafonisi.price">60 € a persona</button>
           </div>
           <div class="structured-description">
             <h4 data-i18n="dayTrips.elafonisi.highlightsTitle">Highlights</h4>
@@ -337,7 +344,7 @@
         <div class="col-md-6">
           <h3 data-i18n="shuttle.marathi.title">Shuttle to Marathi Beach</h3>
           <div class="price-box my-3">
-            <button type="button" class="btn btn-primary btn-lg" data-i18n="shuttle.marathi.price">40 € a persona</button>
+            <button type="button" class="btn btn-primary btn-lg" data-i18n="shuttle.marathi.price">20 € a persona</button>
           </div>
           <p data-i18n="shuttle.marathi.description">
             A shared service in an air-conditioned minivan. Departure at 9:00 AM and return by 7:00 PM. Ideal for families (minimum 4 people).
@@ -441,7 +448,7 @@
               },
               elafonisi: {
                 title: "Elafonisi - The Pink Sand Beach (min 4 people)",
-                price: "€50 per person",
+                price: "€60 per person",
                 highlightsTitle: "Highlights",
                 highlight1: "Spend a relaxing day on the pink sand beaches of Elafonisi",
                 highlight2: "Swim in crystal-clear waters",
@@ -478,7 +485,7 @@
               heading: "Shuttle Services",
               marathi: {
                 title: "Shuttle to Marathi Beach",
-                price: "€40 per person",
+                price: "€20 per person",
                 description: "A shared service in an air-conditioned minivan. Departure at 9:00 AM and return by 7:00 PM. Ideal for families (minimum 4 people)."
               },
               chania: {
@@ -537,7 +544,7 @@
               },
               elafonisi: {
                 title: "Elafonisi - La spiaggia rosa (min. 4 persone)",
-                price: "50 € a persona",
+                price: "60 € a persona",
                 highlightsTitle: "Highlights",
                 highlight1: "Trascorri una giornata rilassante sulle sabbie rosa",
                 highlight2: "Nuota in acque cristalline",
@@ -574,7 +581,7 @@
               heading: "Shuttle Services",
               marathi: {
                 title: "Shuttle per Marathi Beach",
-                price: "40 € a persona",
+                price: "20 € a persona",
                 description: "Servizio condiviso in minivan climatizzato. Partenza ore 9:00, rientro entro le 19:00. Ideale per famiglie, minimo 4 persone."
               },
               chania: {
@@ -633,7 +640,7 @@
               },
               elafonisi: {
                 title: "Elafonisi - Η παραλία με ροζ άμμο (min 4 people)",
-                price: "50 € ανά άτομο",
+                price: "60 € ανά άτομο",
                 highlightsTitle: "Highlights",
                 highlight1: "Περάστε μια χαλαρωτική μέρα στις ροζ αμμουδιές του Elafonisi",
                 highlight2: "Κολυμπήστε σε κρυστάλλινα νερά",
@@ -670,7 +677,7 @@
               heading: "Shuttle Services",
               marathi: {
                 title: "Shuttle to Marathi Beach",
-                price: "€40 per person",
+                price: "€20 per person",
                 description: "A shared service in an air-conditioned minivan. Departure at 9:00 AM and return by 7:00 PM. Ideal for families (minimum 4 people)."
               },
               chania: {
