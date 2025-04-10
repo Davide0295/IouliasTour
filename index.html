@@ -12,7 +12,7 @@
 
   <title data-i18n="pageTitle">Ioulia's Tour</title>
   
-  <!-- Preload LCP image if it's the hero image (update the href to your optimal next-gen image) -->
+  <!-- Preload LCP image (hero image) -->
   <link rel="preload" as="image" href="Images/crete2.webp" />
 
   <!-- Bootstrap CDN -->
@@ -24,7 +24,7 @@
   <script src="https://unpkg.com/i18next@21.6.3/dist/umd/i18next.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   
-  <!-- Favicon links (these are usually small, so next-gen conversion is optional) -->
+  <!-- Favicon links -->
   <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="Images/android-chrome-512x512.png" />
@@ -151,10 +151,11 @@
           <li class="nav-item">
             <a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a>
           </li>
+          <!-- Language Switcher Dropdown -->
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" 
                data-bs-toggle="dropdown" aria-expanded="false">
-              <img id="currentFlag" src="Images/Flags/english.png" alt="English" style="width:20px; margin-right:5px;">
+              <img id="currentFlag" src="Images/Flags/english.png" alt="English" style="width:20px; margin-right:5px;"> 
               <span id="currentLang">English</span>
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
@@ -184,7 +185,7 @@
   <section id="home" class="hero-section position-relative">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <!-- Example of a hero slide converted to next-gen format with <picture> -->
+        <!-- Hero slide with next-gen image and a fallback image -->
         <div class="carousel-item active">
           <picture>
             <source srcset="Images/crete2.webp" type="image/webp">
@@ -194,25 +195,26 @@
         <div class="carousel-item">
           <picture>
             <source srcset="Images/it_chania.webp" type="image/webp">
-            <img src="Images/it_chania.webp" class="d-block w-100" alt="Slide 2" loading="lazy">
+            <!-- Provide fallback (e.g., .jpg) if available -->
+            <img src="Images/it_chania.jpg" class="d-block w-100" alt="Slide 2" loading="lazy">
           </picture>
         </div>
         <div class="carousel-item">
           <picture>
             <source srcset="Images/it_castle.webp" type="image/webp">
-            <img src="Images/it_castle.webp" class="d-block w-100" alt="Slide 2" loading="lazy">
+            <img src="Images/it_castle.jpg" class="d-block w-100" alt="Slide 2" loading="lazy">
           </picture>
         </div>
         <div class="carousel-item">
           <picture>
             <source srcset="Images/crete3.webp" type="image/webp">
-            <img src="Images/crete3.webp" class="d-block w-100" alt="Slide 3" loading="lazy">
+            <img src="Images/crete3.jpg" class="d-block w-100" alt="Slide 3" loading="lazy">
           </picture>
         </div>
         <div class="carousel-item">
           <picture>
             <source srcset="Images/it_elafonisi.webp" type="image/webp">
-            <img src="Images/it_elafonisi.webp" class="d-block w-100" alt="Slide 3" loading="lazy">
+            <img src="Images/it_elafonisi.jpg" class="d-block w-100" alt="Slide 3" loading="lazy">
           </picture>
         </div>
       </div>
@@ -239,19 +241,19 @@
               <div class="carousel-item active">
                 <picture>
                   <source srcset="Images/ιτ_vanInterior.webp" type="image/webp">
-                  <img src="Images/ιτ_vanInterior.webp" class="d-block w-100 van-image" alt="Van Interior 1" loading="lazy">
+                  <img src="Images/ιτ_vanInterior.jpg" class="d-block w-100 van-image" alt="Van Interior 1" loading="lazy">
                 </picture>
               </div>
               <div class="carousel-item">
                 <picture>
                   <source srcset="Images/ιτ_vanExterior.webp" type="image/webp">
-                  <img src="Images/ιτ_vanExterior.webp" class="d-block w-100 van-image" alt="Van Exterior 2" loading="lazy">
+                  <img src="Images/ιτ_vanExterior.jpg" class="d-block w-100 van-image" alt="Van Exterior 2" loading="lazy">
                 </picture>
               </div>
               <div class="carousel-item">
-                <!-- For an image that was previously a PNG, offer a next-gen version if available -->
                 <picture>
                   <source srcset="Images/van_castle.webp" type="image/webp">
+                  <!-- Keeping the original fallback as PNG if available -->
                   <img src="Images/van_castle.png" class="d-block w-100 van-image" alt="Van Exterior 2" loading="lazy">
                 </picture>
               </div>
