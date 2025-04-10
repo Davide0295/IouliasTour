@@ -5,12 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Meta Description -->
-<meta name="description" content="Private NCC transfer service from Akrotiri and Chania to the top beaches in Crete. Comfortable, reliable rides tailored to your travel needs." />
+  <meta name="description" content="Private NCC transfer service from Akrotiri and Chania to the top beaches in Crete. Comfortable, reliable rides tailored to your travel needs." />
 
-<!-- Canonical URL -->
-<link rel="canonical" href="https://www.iouliastour.com/" />
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.iouliastour.com/" />
 
   <title data-i18n="pageTitle">Ioulia's Tour</title>
+  
+  <!-- Preload LCP image if it's the hero image (update the href to your optimal next-gen image) -->
+  <link rel="preload" as="image" href="Images/crete2.webp" />
+
   <!-- Bootstrap CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- External Stylesheet -->
@@ -19,7 +23,8 @@
   <!-- i18next CDN -->
   <script src="https://unpkg.com/i18next@21.6.3/dist/umd/i18next.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Favicon links -->
+  
+  <!-- Favicon links (these are usually small, so next-gen conversion is optional) -->
   <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="Images/android-chrome-512x512.png" />
@@ -35,11 +40,11 @@
       color: #fff;
     }
     
-    /* Fixed WhatsApp Icon Button - Round, green background, white icon */
+    /* Fixed WhatsApp Icon Button */
     .whatsapp-fixed {
       position: fixed;
       bottom: 20px;
-      right: 15px; /* slightly further from the right edge */
+      right: 15px;
       width: 60px;
       height: 60px;
       background-color: #25D366;
@@ -52,7 +57,7 @@
     }
     .whatsapp-fixed i {
       color: #fff;
-      font-size: 38px; /* slightly larger icon */
+      font-size: 38px;
     }
     
     .structured-description h4 {
@@ -179,20 +184,36 @@
   <section id="home" class="hero-section position-relative">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
       <div class="carousel-inner">
+        <!-- Example of a hero slide converted to next-gen format with <picture> -->
         <div class="carousel-item active">
-          <img src="Images/crete2.jpg" class="d-block w-100" alt="Slide 3" />
+          <picture>
+            <source srcset="Images/crete2.webp" type="image/webp">
+            <img src="Images/crete2.jpg" class="d-block w-100" alt="Slide 3" loading="eager">
+          </picture>
         </div>
-        <div class="carousel-item active">
-          <img src="Images/it_chania.webp" class="d-block w-100" alt="Slide 2" />
+        <div class="carousel-item">
+          <picture>
+            <source srcset="Images/it_chania.webp" type="image/webp">
+            <img src="Images/it_chania.webp" class="d-block w-100" alt="Slide 2" loading="lazy">
+          </picture>
         </div>
-        <div class="carousel-item active">
-          <img src="Images/it_castle.webp class="d-block w-100" alt="Slide 2" />
+        <div class="carousel-item">
+          <picture>
+            <source srcset="Images/it_castle.webp" type="image/webp">
+            <img src="Images/it_castle.webp" class="d-block w-100" alt="Slide 2" loading="lazy">
+          </picture>
         </div>
-        <div class="carousel-item active">
-          <img src="Images/crete3.webp" class="d-block w-100" alt="Slide 3" />
+        <div class="carousel-item">
+          <picture>
+            <source srcset="Images/crete3.webp" type="image/webp">
+            <img src="Images/crete3.webp" class="d-block w-100" alt="Slide 3" loading="lazy">
+          </picture>
         </div>
-        <div class="carousel-item active">
-          <img src="Images/it_elafonisi.webp" class="d-block w-100" alt="Slide 3" />
+        <div class="carousel-item">
+          <picture>
+            <source srcset="Images/it_elafonisi.webp" type="image/webp">
+            <img src="Images/it_elafonisi.webp" class="d-block w-100" alt="Slide 3" loading="lazy">
+          </picture>
         </div>
       </div>
     </div>
@@ -216,13 +237,23 @@
           <div id="vanCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="Images/ιτ_vanInterior.webp" class="d-block w-100 van-image" alt="Van Interior 1" />
+                <picture>
+                  <source srcset="Images/ιτ_vanInterior.webp" type="image/webp">
+                  <img src="Images/ιτ_vanInterior.webp" class="d-block w-100 van-image" alt="Van Interior 1" loading="lazy">
+                </picture>
               </div>
               <div class="carousel-item">
-                <img src="Images/ιτ_vanExterior.webp" class="d-block w-100 van-image" alt="Van Exterior 2" />
+                <picture>
+                  <source srcset="Images/ιτ_vanExterior.webp" type="image/webp">
+                  <img src="Images/ιτ_vanExterior.webp" class="d-block w-100 van-image" alt="Van Exterior 2" loading="lazy">
+                </picture>
               </div>
               <div class="carousel-item">
-                <img src="Images/van_castle.png" class="d-block w-100 van-image" alt="Van Exterior 2" />
+                <!-- For an image that was previously a PNG, offer a next-gen version if available -->
+                <picture>
+                  <source srcset="Images/van_castle.webp" type="image/webp">
+                  <img src="Images/van_castle.png" class="d-block w-100 van-image" alt="Van Exterior 2" loading="lazy">
+                </picture>
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#vanCarousel" data-bs-slide="prev">
@@ -275,7 +306,6 @@
       <p class="text-center mb-4" data-i18n="contact.description">
         To book our service, please call us at +30 6942818200 or email us at contact.iouliastour@gmail.com. Alternatively, fill in the form below and we will get back to you.
       </p>
-      <!-- Updated form: action points to new Formspree endpoint, using POST method and having name attributes -->
       <form id="contactForm" action="https://formspree.io/f/mqapgogv" method="POST" novalidate>
         <div class="mb-3">
           <input type="text" class="form-control" placeholder="Your Name" name="name" data-i18n="contact.namePlaceholder" required />
@@ -293,11 +323,6 @@
       </form>
     </div>
   </section>
-
-  <!-- Fixed WhatsApp Icon Button -->
-  <a href="whatsapp://send?phone=306942818200" class="whatsapp-fixed" target="_blank" title="Chat with us on WhatsApp">
-    <i class="fab fa-whatsapp"></i>
-  </a>
 
   <!-- Footer -->
   <footer class="bg-dark text-white py-4">
