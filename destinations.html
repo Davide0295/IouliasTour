@@ -4,17 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Meta Description -->
+  <!-- Meta Description -->
   <meta name="description" content="Private NCC transfer service from Akrotiri and Chania to the top beaches in Crete. Comfortable, reliable rides tailored to your travel needs." />
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.iouliastour.com/" />
   <title data-i18n="pageTitle">Ioulia's Tour - Destinations</title>
 
-  <link rel="preload" href="Images/falassarna-top-1-1280.webp" as="image">
+  <!-- Preload the critical LCP image if desired -->
+  <link rel="preload" href="Images/falassarna-top-1-1280.webp" as="image" />
 
   <!-- Bootstrap CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
   <!-- External Stylesheet -->
   <link rel="stylesheet" href="Style/style.css" />
   <!-- AOS Library CSS for scroll animations -->
@@ -22,12 +26,33 @@
   <!-- i18next CDN -->
   <script src="https://unpkg.com/i18next@21.6.3/dist/umd/i18next.min.js"></script>
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-..."
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <!-- Favicon links -->
-  <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="512x512" href="Images/android-chrome-512x512.png" />
-  
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="Images/favicon-16x16.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="Images/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="512x512"
+    href="Images/android-chrome-512x512.png"
+  />
+
   <style>
     /* Price button style with color #FFB703 */
     .price-box button {
@@ -99,7 +124,7 @@
       pointer-events: none;
     }
 
-    /* Fixed WhatsApp Icon Button - Round, green background, white icon */
+    /* Fixed WhatsApp Icon Button */
     .whatsapp-fixed {
       position: fixed;
       bottom: 20px;
@@ -119,7 +144,7 @@
       font-size: 38px;
     }
     
-    /* New CSS for Section Titles and Service Separation */
+    /* Section Titles and Service Separation */
     .section-title {
       font-family: Georgia, serif;
       font-weight: bold;
@@ -140,34 +165,29 @@
       display: grid;
       gap: 15px;
     }
-    /* For desktop: two-column layout using grid template areas */
     @media (min-width: 768px) {
-      /* Standard: text (title+details) on left, image on right */
       .service-grid.standard {
-          grid-template-columns: 1fr 1fr;
-          grid-template-areas:
-            "title image"
-            "details image";
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "title image"
+          "details image";
       }
-      /* Reverse: image on left, text (title+details) on right */
       .service-grid.reverse {
-          grid-template-columns: 1fr 1fr;
-          grid-template-areas:
-            "image title"
-            "image details";
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+          "image title"
+          "image details";
       }
     }
-    /* For mobile: vertical stack: always title, then image, then details */
     @media (max-width: 767px) {
       .service-grid {
-          grid-template-columns: 1fr;
-          grid-template-areas:
-            "title"
-            "image"
-            "details";
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "title"
+          "image"
+          "details";
       }
     }
-    /* Grid area assignments */
     .service-title {
       grid-area: title;
     }
@@ -184,52 +204,113 @@
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="Images/IT_Logo.png" alt="Ioulia's Tour Logo" style="height: 60px;" />
+        <!-- Keep style the same, but add width & height for optimization. 
+             Adjust width if needed; here we assume 200x60 as an example. -->
+        <img
+          src="Images/IT_Logo.png"
+          alt="Ioulia's Tour Logo"
+          width="200"
+          height="60"
+          style="height: 60px;"
+        />
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-              data-bs-target="#navbarNav" aria-controls="navbarNav" 
-              aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html" data-i18n="nav.home">Home</a>
+            <a class="nav-link" href="index.html" data-i18n="nav.home"
+              >Home</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="aboutusMultilingual.html" data-i18n="nav.about">About Us</a>
+            <a
+              class="nav-link"
+              href="aboutusMultilingual.html"
+              data-i18n="nav.about"
+              >About Us</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="transfersMultilingual.html" data-i18n="nav.transfers">Transfers</a>
+            <a
+              class="nav-link"
+              href="transfersMultilingual.html"
+              data-i18n="nav.transfers"
+              >Transfers</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="destinations.html" data-i18n="nav.destinations">Destinations</a>
+            <a
+              class="nav-link active"
+              href="destinations.html"
+              data-i18n="nav.destinations"
+              >Destinations</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html#contact" data-i18n="nav.contact">Contact</a>
+            <a
+              class="nav-link"
+              href="index.html#contact"
+              data-i18n="nav.contact"
+              >Contact</a
+            >
           </li>
           <!-- Language Switcher Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" 
-               data-bs-toggle="dropdown" aria-expanded="false">
-              <img id="currentFlag" src="Images/Flags/english.png" alt="English" style="width:20px; margin-right:5px;"> 
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                id="currentFlag"
+                src="Images/Flags/english.png"
+                alt="English"
+                style="width:20px; margin-right:5px;"
+              />
               <span id="currentLang">English</span>
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
               <li>
                 <a class="dropdown-item lang-switch" href="#" data-lang="en">
-                  <img src="Images/Flags/english.png" alt="English" style="width:20px; margin-right:5px;"> English
+                  <img
+                    src="Images/Flags/english.png"
+                    alt="English"
+                    style="width:20px; margin-right:5px;"
+                  />
+                  English
                 </a>
               </li>
               <li>
                 <a class="dropdown-item lang-switch" href="#" data-lang="it">
-                  <img src="Images/Flags/italy.png" alt="Italian" style="width:20px; margin-right:5px;"> Italiano
+                  <img
+                    src="Images/Flags/italy.png"
+                    alt="Italian"
+                    style="width:20px; margin-right:5px;"
+                  />
+                  Italiano
                 </a>
               </li>
               <li>
                 <a class="dropdown-item lang-switch" href="#" data-lang="el">
-                  <img src="Images/Flags/greek.png" alt="Greek" style="width:20px; margin-right:5px;"> Ελληνικά
+                  <img
+                    src="Images/Flags/greek.png"
+                    alt="Greek"
+                    style="width:20px; margin-right:5px;"
+                  />
+                  Ελληνικά
                 </a>
               </li>
             </ul>
@@ -243,165 +324,303 @@
   <section class="py-5">
     <div class="container">
       <!-- Header and Intro Paragraph -->
-      <h1 class="text-center mb-4" data-i18n="escursioni.heading">Escursioni e Servizi Shuttle da Akrotiri/Chania</h1>
+      <h1 class="text-center mb-4" data-i18n="escursioni.heading">
+        Escursioni e Servizi Shuttle da Akrotiri/Chania
+      </h1>
       <p class="text-center mb-5" data-i18n="escursioni.paragraph">
-        Offriamo servizi privati di noleggio con conducente (NCC) e shuttle condivisi, con partenza esclusiva dalla zona di Akrotiri/Chania. Le nostre escursioni sono confortevoli, sicure e ideali per gruppi e famiglie. Prenotazione anticipata consigliata.
+        Offriamo servizi privati di noleggio con conducente (NCC) e shuttle condivisi, con
+        partenza esclusiva dalla zona di Akrotiri/Chania. Le nostre escursioni sono
+        confortevoli, sicure e ideali per gruppi e famiglie. Prenotazione anticipata
+        consigliata.
       </p>
 
       <!-- Day Trips Section -->
       <h2 class="section-title" data-i18n="dayTrips.heading">Day Trips</h2>
       
-      <!-- Falasarna Service (Reverse: Desktop – image on left, text on right) -->
+      <!-- Falasarna Service (Reverse layout) -->
       <div class="service-grid reverse trip-service" data-aos="fade-up">
         <div class="service-title">
-          <h3 data-i18n="dayTrips.falasarna.title">Falasarna - Beach Day (min 4 people)</h3>
+          <h3 data-i18n="dayTrips.falasarna.title">
+            Falasarna - Beach Day (min 4 people)
+          </h3>
         </div>
         <div class="service-image">
-          <img src="Images/falassarna-top-1-1280.webp" alt="Falasarna" width="1280" height="720" decoding="async" class="img-fluid rounded">
+          <!-- LCP image: explicit width & height, plus optional decoding & fetchpriority -->
+          <img
+            src="Images/falassarna-top-1-1280.webp"
+            alt="Falasarna"
+            width="1280"
+            height="720"
+            decoding="async"
+            fetchpriority="high"
+            class="img-fluid rounded"
+          />
         </div>
         <div class="service-details">
           <div class="price-box my-3">
-            <button type="button" class="btn btn-primary btn-lg" data-i18n="dayTrips.falasarna.price">50 € per person</button>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              data-i18n="dayTrips.falasarna.price"
+            >
+              €50 per person
+            </button>
           </div>
           <div class="structured-description">
             <h4 data-i18n="dayTrips.falasarna.highlightsTitle">Highlights</h4>
             <ul>
-              <li data-i18n="dayTrips.falasarna.highlight1">Discover one of the most iconic beaches on the west coast</li>
-              <li data-i18n="dayTrips.falasarna.highlight2">Enjoy spectacular sunsets</li>
-              <li data-i18n="dayTrips.falasarna.highlight3">Swim in turquoise, crystal-clear waters</li>
-              <li data-i18n="dayTrips.falasarna.highlight4">Stop at charming villages along the way</li>
+              <li data-i18n="dayTrips.falasarna.highlight1">
+                Discover one of the most iconic beaches on the west coast
+              </li>
+              <li data-i18n="dayTrips.falasarna.highlight2">
+                Enjoy spectacular sunsets
+              </li>
+              <li data-i18n="dayTrips.falasarna.highlight3">
+                Swim in turquoise, crystal-clear waters
+              </li>
+              <li data-i18n="dayTrips.falasarna.highlight4">
+                Stop at charming villages along the way
+              </li>
             </ul>
-            <h4 data-i18n="dayTrips.falasarna.fullDescriptionTitle">Full Description</h4>
+            <h4 data-i18n="dayTrips.falasarna.fullDescriptionTitle">
+              Full Description
+            </h4>
             <p data-i18n="dayTrips.falasarna.fullDescription">
-              Enjoy a trip to one of Crete’s most enchanting spots: Falasarna. Renowned for its golden sandy beach and turquoise sea, the transfer is provided in an air-conditioned minivan as a private service (min 4 people), ensuring comfort throughout the journey. Relax, swim and sunbathe at your leisure.
+              Enjoy a trip to one of Crete’s most enchanting spots: Falasarna.
+              Renowned for its golden sandy beach and turquoise sea, the transfer
+              is provided in an air-conditioned minivan as a private service (min
+              4 people), ensuring comfort throughout the journey. Relax, swim and
+              sunbathe at your leisure.
             </p>
-            <h4 data-i18n="dayTrips.falasarna.timelineTitle">Times & Itinerary</h4>
+            <h4 data-i18n="dayTrips.falasarna.timelineTitle">
+              Times & Itinerary
+            </h4>
             <div class="vertical-timeline">
               <div class="vertical-timeline-item">
-                <div class="timeline-dot"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="timeline-dot">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
                 <div class="timeline-content">
-                  <h5 data-i18n="dayTrips.falasarna.timeline.pickup">8:00-8:30 - Pick-up</h5>
+                  <h5 data-i18n="dayTrips.falasarna.timeline.pickup">
+                    8:00-8:30 - Pick-up
+                  </h5>
                   <p data-i18n="dayTrips.falasarna.timeline.pickupText">
-                    We’ll collect you from the Akrotiri/Chania area (multiple stops may be required).
+                    We’ll collect you from the Akrotiri/Chania area (multiple stops may
+                    be required).
                   </p>
                 </div>
               </div>
               <div class="vertical-timeline-item">
-                <div class="timeline-dot"><i class="fas fa-car"></i></div>
+                <div class="timeline-dot">
+                  <i class="fas fa-car"></i>
+                </div>
                 <div class="timeline-content">
-                  <h5 data-i18n="dayTrips.falasarna.timeline.travel">10:00 - Arrival at Falasarna</h5>
+                  <h5 data-i18n="dayTrips.falasarna.timeline.travel">
+                    10:00 - Arrival at Falasarna
+                  </h5>
                   <p data-i18n="dayTrips.falasarna.timeline.travelText">
                     Arrival at the beach with plenty of free time to relax and swim.
                   </p>
                 </div>
               </div>
               <div class="vertical-timeline-item">
-                <div class="timeline-dot"><i class="fas fa-flag-checkered"></i></div>
+                <div class="timeline-dot">
+                  <i class="fas fa-flag-checkered"></i>
+                </div>
                 <div class="timeline-content">
-                  <h5 data-i18n="dayTrips.falasarna.timeline.return">17:30 - Depart for Chania</h5>
+                  <h5 data-i18n="dayTrips.falasarna.timeline.return">
+                    17:30 - Depart for Chania
+                  </h5>
                   <p data-i18n="dayTrips.falasarna.timeline.returnText">
-                    Departure from Falasarna with drop-off at designated points in Chania by 19:00.
+                    Departure from Falasarna with drop-off at designated points in
+                    Chania by 19:00.
                   </p>
                 </div>
               </div>
             </div>
             <h4 data-i18n="dayTrips.falasarna.includesTitle">Includes</h4>
             <ul>
-              <li data-i18n="dayTrips.falasarna.include1">Transport in an air-conditioned minivan (Private Service)</li>
+              <li data-i18n="dayTrips.falasarna.include1">
+                Transport in an air-conditioned minivan (Private Service)
+              </li>
               <li data-i18n="dayTrips.falasarna.include2">Experienced driver</li>
-              <li data-i18n="dayTrips.falasarna.include3">Pickup and drop-off from designated areas in Akrotiri/Chania</li>
-              <li data-i18n="dayTrips.falasarna.include4">Suggestions on local spots and restaurants</li>
+              <li data-i18n="dayTrips.falasarna.include3">
+                Pickup and drop-off from designated areas in Akrotiri/Chania
+              </li>
+              <li data-i18n="dayTrips.falasarna.include4">
+                Suggestions on local spots and restaurants
+              </li>
             </ul>
           </div>
         </div>
       </div>
       
-      <!-- Elafonisi Service (Standard: Desktop – text on left, image on right) -->
+      <!-- Elafonisi Service (Standard layout) -->
       <div class="service-grid standard trip-service" data-aos="fade-up">
         <div class="service-title">
-          <h3 data-i18n="dayTrips.elafonisi.title">Elafonisi - The Pink Sand Beach (min 4 people)</h3>
+          <h3 data-i18n="dayTrips.elafonisi.title">
+            Elafonisi - The Pink Sand Beach (min 4 people)
+          </h3>
         </div>
         <div class="service-image">
-          <img src="Images/it_elafonisi.webp" alt="Elafonisi" class="img-fluid rounded" />
+          <!-- Non-LCP images can use lazy loading -->
+          <img
+            src="Images/it_elafonisi.webp"
+            alt="Elafonisi"
+            width="1280"
+            height="720"
+            decoding="async"
+            loading="lazy"
+            class="img-fluid rounded"
+          />
         </div>
         <div class="service-details">
           <div class="price-box my-3">
-            <button type="button" class="btn btn-primary btn-lg" data-i18n="dayTrips.elafonisi.price">60 € per person</button>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              data-i18n="dayTrips.elafonisi.price"
+            >
+              €60 per person
+            </button>
           </div>
           <div class="structured-description">
             <h4 data-i18n="dayTrips.elafonisi.highlightsTitle">Highlights</h4>
             <ul>
-              <li data-i18n="dayTrips.elafonisi.highlight1">Spend a relaxing day on the pink sand beaches of Elafonisi</li>
-              <li data-i18n="dayTrips.elafonisi.highlight2">Swim in crystal-clear waters</li>
-              <li data-i18n="dayTrips.elafonisi.highlight3">Stroll in a protected area of outstanding natural beauty</li>
-              <li data-i18n="dayTrips.elafonisi.highlight4">Take in lush green landscapes through Topolia Gorge</li>
+              <li data-i18n="dayTrips.elafonisi.highlight1">
+                Spend a relaxing day on the pink sand beaches of Elafonisi
+              </li>
+              <li data-i18n="dayTrips.elafonisi.highlight2">
+                Swim in crystal-clear waters
+              </li>
+              <li data-i18n="dayTrips.elafonisi.highlight3">
+                Stroll in a protected area of outstanding natural beauty
+              </li>
+              <li data-i18n="dayTrips.elafonisi.highlight4">
+                Take in lush green landscapes through Topolia Gorge
+              </li>
             </ul>
-            <h4 data-i18n="dayTrips.elafonisi.fullDescriptionTitle">Full Description</h4>
+            <h4 data-i18n="dayTrips.elafonisi.fullDescriptionTitle">
+              Full Description
+            </h4>
             <p data-i18n="dayTrips.elafonisi.fullDescription">
-              Following pickup by minivan, journey to the southwest corner of Crete to enjoy a private, relaxing day on the pink sand beaches of the small island of Elafonisi. Experience breathtaking natural surroundings with plenty of free time to swim, sunbathe and unwind.
+              Following pickup by minivan, journey to the southwest corner of
+              Crete to enjoy a private, relaxing day on the pink sand beaches
+              of the small island of Elafonisi. Experience breathtaking natural
+              surroundings with plenty of free time to swim, sunbathe and
+              unwind.
             </p>
-            <h4 data-i18n="dayTrips.elafonisi.timelineTitle">Times & Itinerary</h4>
+            <h4 data-i18n="dayTrips.elafonisi.timelineTitle">
+              Times & Itinerary
+            </h4>
             <div class="vertical-timeline">
               <div class="vertical-timeline-item">
-                <div class="timeline-dot"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="timeline-dot">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
                 <div class="timeline-content">
-                  <h5 data-i18n="dayTrips.elafonisi.timeline.pickup">8:00-8:30 - Pick-up</h5>
+                  <h5 data-i18n="dayTrips.elafonisi.timeline.pickup">
+                    8:00-8:30 - Pick-up
+                  </h5>
                   <p data-i18n="dayTrips.elafonisi.timeline.pickupText">
-                    We’ll collect you from the Akrotiri/Chania area (multiple stops may be required).
+                    We’ll collect you from the Akrotiri/Chania area (multiple stops may
+                    be required).
                   </p>
                 </div>
               </div>
               <div class="vertical-timeline-item">
-                <div class="timeline-dot"><i class="fas fa-car"></i></div>
+                <div class="timeline-dot">
+                  <i class="fas fa-car"></i>
+                </div>
                 <div class="timeline-content">
-                  <h5 data-i18n="dayTrips.elafonisi.timeline.travel">10:30 - Arrival at Elafonisi</h5>
+                  <h5 data-i18n="dayTrips.elafonisi.timeline.travel">
+                    10:30 - Arrival at Elafonisi
+                  </h5>
                   <p data-i18n="dayTrips.elafonisi.timeline.travelText">
                     Arrival at the beach with ample time to relax and swim.
                   </p>
                 </div>
               </div>
               <div class="vertical-timeline-item">
-                <div class="timeline-dot"><i class="fas fa-flag-checkered"></i></div>
+                <div class="timeline-dot">
+                  <i class="fas fa-flag-checkered"></i>
+                </div>
                 <div class="timeline-content">
-                  <h5 data-i18n="dayTrips.elafonisi.timeline.return">17:00 - Depart for Chania</h5>
+                  <h5 data-i18n="dayTrips.elafonisi.timeline.return">
+                    17:00 - Depart for Chania
+                  </h5>
                   <p data-i18n="dayTrips.elafonisi.timeline.returnText">
-                    Departure from Elafonisi with drop-off at your designated location in Chania by 19:00.
+                    Departure from Elafonisi with drop-off at your designated
+                    location in Chania by 19:00.
                   </p>
                 </div>
               </div>
             </div>
             <h4 data-i18n="dayTrips.elafonisi.includesTitle">Includes</h4>
             <ul>
-              <li data-i18n="dayTrips.elafonisi.include1">Transport in an air-conditioned minivan (Private Service)</li>
-              <li data-i18n="dayTrips.elafonisi.include2">Experienced driver</li>
-              <li data-i18n="dayTrips.elafonisi.include3">Pickup and drop-off from designated areas in Akrotiri/Chania</li>
-              <li data-i18n="dayTrips.elafonisi.include4">Suggestions on local spots and restaurants</li>
+              <li data-i18n="dayTrips.elafonisi.include1">
+                Transport in an air-conditioned minivan (Private Service)
+              </li>
+              <li data-i18n="dayTrips.elafonisi.include2">
+                Experienced driver
+              </li>
+              <li data-i18n="dayTrips.elafonisi.include3">
+                Pickup and drop-off from designated areas in Akrotiri/Chania
+              </li>
+              <li data-i18n="dayTrips.elafonisi.include4">
+                Suggestions on local spots and restaurants
+              </li>
             </ul>
           </div>
         </div>
       </div>
       
-      <!-- Custom Day Trips (And More) Service (Reverse) -->
+      <!-- Custom Day Trips (Reverse) -->
       <div class="service-grid reverse trip-service" data-aos="fade-up">
         <div class="service-title">
-          <h3 data-i18n="dayTrips.custom.title">And More (Customized Trips) (min 4 people)</h3>
+          <h3 data-i18n="dayTrips.custom.title">
+            And More (Customized Trips) (min 4 people)
+          </h3>
         </div>
         <div class="service-image">
-          <img src="Images/Seitan.jpg" alt="Other Destinations" class="img-fluid rounded" />
+          <!-- Example dimensions; adjust as needed for your actual image size -->
+          <img
+            src="Images/Seitan.jpg"
+            alt="Other Destinations"
+            width="1280"
+            height="720"
+            loading="lazy"
+            decoding="async"
+            class="img-fluid rounded"
+          />
         </div>
         <div class="service-details">
           <div class="price-box my-3">
-            <button type="button" class="btn btn-primary btn-lg" data-i18n="dayTrips.custom.price">On request</button>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              data-i18n="dayTrips.custom.price"
+            >
+              On request
+            </button>
           </div>
           <div class="structured-description">
             <h4 data-i18n="dayTrips.custom.highlightsTitle">Highlights</h4>
             <ul>
-              <li data-i18n="dayTrips.custom.highlight1">Additional beaches and destinations available upon request</li>
-              <li data-i18n="dayTrips.custom.highlight2">Tailor-made itineraries for a personalized experience</li>
+              <li data-i18n="dayTrips.custom.highlight1">
+                Additional beaches and destinations available upon request
+              </li>
+              <li data-i18n="dayTrips.custom.highlight2">
+                Tailor-made itineraries for a personalized experience
+              </li>
             </ul>
-            <h4 data-i18n="dayTrips.custom.fullDescriptionTitle">Full Description</h4>
+            <h4 data-i18n="dayTrips.custom.fullDescriptionTitle">
+              Full Description
+            </h4>
             <p data-i18n="dayTrips.custom.fullDescription">
-              Beyond our standard day trips, we can customize transfers and excursions to various parts of Crete – from secluded beaches to hidden local attractions. Contact us for personalized options.
+              Beyond our standard day trips, we can customize transfers and
+              excursions to various parts of Crete – from secluded beaches to
+              hidden local attractions. Contact us for personalized options.
             </p>
           </div>
         </div>
@@ -416,17 +635,33 @@
           <h3 data-i18n="shuttle.marathi.title">Shuttle to Marathi Beach</h3>
         </div>
         <div class="service-image">
-          <img src="Images/it_marathi.jpeg" alt="Marathi Beach Shuttle" class="img-fluid rounded" />
+          <img
+            src="Images/it_marathi.jpeg"
+            alt="Marathi Beach Shuttle"
+            width="1280"
+            height="720"
+            loading="lazy"
+            decoding="async"
+            class="img-fluid rounded"
+          />
         </div>
         <div class="service-details">
           <div class="price-box my-3">
-            <button type="button" class="btn btn-primary btn-lg" data-i18n="shuttle.marathi.price">20 € per person</button>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              data-i18n="shuttle.marathi.price"
+            >
+              20 € per person
+            </button>
           </div>
           <p data-i18n="shuttle.marathi.description">
-            A shared service in an air-conditioned minivan. Departure at 9:00 AM and return by 7:00 PM. Ideal for families (minimum 4 people).
+            A shared service in an air-conditioned minivan. Departure at 9:00 AM
+            and return by 7:00 PM. Ideal for families (minimum 4 people).
           </p>
           <p class="flexibility-note" data-i18n="shuttle.flexibility">
-            *Pickup and drop-off times can be personalized and flexible upon request.*
+            *Pickup and drop-off times can be personalized and flexible upon
+            request.*
           </p>
         </div>
       </div>
@@ -434,17 +669,37 @@
       <!-- Shuttle to Agia Triada Monastery (Standard) -->
       <div class="service-grid standard trip-service" data-aos="fade-up">
         <div class="service-title">
-          <h3 data-i18n="shuttle.triada.title">Shuttle to Agia Triada Monastery</h3>
+          <h3 data-i18n="shuttle.triada.title">
+            Shuttle to Agia Triada Monastery
+          </h3>
         </div>
         <div class="service-image">
-          <img src="Images/agia_triada.webp" alt="Agia Triada Monastery Shuttle" class="img-fluid rounded" />
+          <img
+            src="Images/agia_triada.webp"
+            alt="Agia Triada Monastery Shuttle"
+            width="1280"
+            height="720"
+            loading="lazy"
+            decoding="async"
+            class="img-fluid rounded"
+          />
         </div>
         <div class="service-details">
           <div class="price-box my-3">
-            <button type="button" class="btn btn-primary btn-lg" data-i18n="shuttle.triada.price">15 € per person</button>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              data-i18n="shuttle.triada.price"
+            >
+              15 € per person
+            </button>
           </div>
           <p data-i18n="shuttle.triada.description">
-            A dedicated shuttle service to Agia Triada Monastery, located a few kilometers outside of Chania. Departure at 12:00 and return at 16:00. Ideal for families (minimum 4 people). Highlights: Visit the monastery renowned for producing organic olive oil, wine, honey and soap. Optional: Enjoy a tasting of exquisite organic wines.
+            A dedicated shuttle service to Agia Triada Monastery, located a few
+            kilometers outside of Chania. Departure at 12:00 and return at
+            16:00. Ideal for families (minimum 4 people). Highlights: Visit the
+            monastery renowned for producing organic olive oil, wine, honey and
+            soap. Optional: Enjoy a tasting of exquisite organic wines.
           </p>
         </div>
       </div>
@@ -452,20 +707,39 @@
       <!-- Evening Shuttle to Chania Center (Reverse) -->
       <div class="service-grid reverse trip-service" data-aos="fade-up">
         <div class="service-title">
-          <h3 data-i18n="shuttle.chania.title">Evening Shuttle to Chania Center</h3>
+          <h3 data-i18n="shuttle.chania.title">
+            Evening Shuttle to Chania Center
+          </h3>
         </div>
         <div class="service-image">
-          <img src="Images/Chania_port.webp" alt="Chania Shuttle" class="img-fluid rounded" />
+          <img
+            src="Images/Chania_port.webp"
+            alt="Chania Shuttle"
+            width="1280"
+            height="720"
+            loading="lazy"
+            decoding="async"
+            class="img-fluid rounded"
+          />
         </div>
         <div class="service-details">
           <div class="price-box my-3">
-            <button type="button" class="btn btn-primary btn-lg" data-i18n="shuttle.chania.price">25 € per person</button>
+            <button
+              type="button"
+              class="btn btn-primary btn-lg"
+              data-i18n="shuttle.chania.price"
+            >
+              25 € per person
+            </button>
           </div>
           <p data-i18n="shuttle.chania.description">
-            Perfect for a night out in town: dinner, a stroll along the Venetian port, or shopping. Depart at 8:30 PM, return by 12:30 AM. Shared service with a minimum of 4 people.
+            Perfect for a night out in town: dinner, a stroll along the Venetian
+            port, or shopping. Depart at 8:30 PM, return by 12:30 AM. Shared
+            service with a minimum of 4 people.
           </p>
           <p class="flexibility-note" data-i18n="shuttle.flexibility">
-            *Pickup and drop-off times can be personalized and flexible upon request.*
+            *Pickup and drop-off times can be personalized and flexible upon
+            request.*
           </p>
         </div>
       </div>
