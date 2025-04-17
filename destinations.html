@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Meta Description -->
-  <meta name="description" content="Private NCC transfer service from Akrotiri and Chania to the top beaches in Crete. Comfortable, reliable rides tailored to your travel needs." />
+  <meta name="description"
+    content="Private NCC transfer service from Akrotiri and Chania to the top beaches in Crete. Comfortable, reliable rides tailored to your travel needs." />
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://www.iouliastour.com/" />
@@ -15,10 +17,7 @@
   <link rel="preload" href="Images/falassarna-top-1-1280.webp" as="image" />
 
   <!-- Bootstrap CDN -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <!-- External Stylesheet -->
   <link rel="stylesheet" href="Style/style.css" />
   <!-- AOS Library CSS for scroll animations -->
@@ -26,32 +25,12 @@
   <!-- i18next CDN -->
   <script src="https://unpkg.com/i18next@21.6.3/dist/umd/i18next.min.js"></script>
   <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-..."
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Favicon links -->
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="Images/favicon-16x16.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="Images/favicon-32x32.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="512x512"
-    href="Images/android-chrome-512x512.png"
-  />
+  <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="Images/android-chrome-512x512.png" />
 
   <style>
     /* Price button style with color #FFB703 */
@@ -76,10 +55,12 @@
       padding-left: 30px;
       border-left: 3px solid #ff6600;
     }
+
     .vertical-timeline-item {
       position: relative;
       margin-bottom: 20px;
     }
+
     .timeline-dot {
       position: absolute;
       left: -11px;
@@ -93,13 +74,16 @@
       justify-content: center;
       color: #fff;
     }
+
     .timeline-content {
       margin-left: 30px;
     }
+
     .timeline-content h5 {
       margin-bottom: 5px;
       font-weight: 600;
     }
+
     .timeline-content p {
       margin-bottom: 0;
     }
@@ -118,6 +102,7 @@
       margin: 0 auto;
       border: 2px solid #ccc;
     }
+
     .map-container iframe {
       width: 100%;
       height: 450px;
@@ -139,11 +124,12 @@
       z-index: 9999;
       text-decoration: none;
     }
+
     .whatsapp-fixed i {
       color: #fff;
       font-size: 38px;
     }
-    
+
     /* Section Titles and Service Separation */
     .section-title {
       font-family: Georgia, serif;
@@ -153,18 +139,19 @@
       padding-bottom: 10px;
       margin-bottom: 20px;
     }
-    
+
     .trip-service {
       border-bottom: 1px solid #ccc;
       padding-bottom: 20px;
       margin-bottom: 20px;
     }
-    
+
     /* CSS Grid for Service Layout */
     .service-grid {
       display: grid;
       gap: 15px;
     }
+
     @media (min-width: 768px) {
       .service-grid.standard {
         grid-template-columns: 1fr 1fr;
@@ -172,6 +159,7 @@
           "title image"
           "details image";
       }
+
       .service-grid.reverse {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
@@ -179,6 +167,7 @@
           "image details";
       }
     }
+
     @media (max-width: 767px) {
       .service-grid {
         grid-template-columns: 1fr;
@@ -188,17 +177,21 @@
           "details";
       }
     }
+
     .service-title {
       grid-area: title;
     }
+
     .service-image {
       grid-area: image;
     }
+
     .service-details {
       grid-area: details;
     }
   </style>
 </head>
+
 <body>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -206,104 +199,53 @@
       <a class="navbar-brand" href="index.html">
         <!-- Keep style the same, but add width & height for optimization. 
              Adjust width if needed; here we assume 200x60 as an example. -->
-             <img src="Images/IT_Logo.png" alt="Ioulia's Tour Logo" style="height: 60px;" />
+        <img src="Images/IT_Logo.png" alt="Ioulia's Tour Logo" style="height: 60px;" />
       </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html" data-i18n="nav.home"
-              >Home</a
-            >
+            <a class="nav-link" href="index.html" data-i18n="nav.home">Home</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="aboutusMultilingual.html"
-              data-i18n="nav.about"
-              >About Us</a
-            >
+            <a class="nav-link" href="aboutusMultilingual.html" data-i18n="nav.about">About Us</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="transfersMultilingual.html"
-              data-i18n="nav.transfers"
-              >Transfers</a
-            >
+            <a class="nav-link" href="transfersMultilingual.html" data-i18n="nav.transfers">Transfers</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link active"
-              href="destinations.html"
-              data-i18n="nav.destinations"
-              >Destinations</a
-            >
+            <a class="nav-link active" href="destinations.html" data-i18n="nav.destinations">Destinations</a>
           </li>
           <li class="nav-item">
-            <a
-              class="nav-link"
-              href="index.html#contact"
-              data-i18n="nav.contact"
-              >Contact</a
-            >
+            <a class="nav-link" href="index.html#contact" data-i18n="nav.contact">Contact</a>
           </li>
           <!-- Language Switcher Dropdown -->
           <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <img
-                id="currentFlag"
-                src="Images/Flags/english.png"
-                alt="English"
-                style="width:20px; margin-right:5px;"
-              />
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <img id="currentFlag" src="Images/Flags/english.png" alt="English"
+                style="width:20px; margin-right:5px;" />
               <span id="currentLang">English</span>
             </a>
             <ul class="dropdown-menu dropdown-menu-end">
               <li>
                 <a class="dropdown-item lang-switch" href="#" data-lang="en">
-                  <img
-                    src="Images/Flags/english.png"
-                    alt="English"
-                    style="width:20px; margin-right:5px;"
-                  />
+                  <img src="Images/Flags/english.png" alt="English" style="width:20px; margin-right:5px;" />
                   English
                 </a>
               </li>
               <li>
                 <a class="dropdown-item lang-switch" href="#" data-lang="it">
-                  <img
-                    src="Images/Flags/italy.png"
-                    alt="Italian"
-                    style="width:20px; margin-right:5px;"
-                  />
+                  <img src="Images/Flags/italy.png" alt="Italian" style="width:20px; margin-right:5px;" />
                   Italiano
                 </a>
               </li>
               <li>
                 <a class="dropdown-item lang-switch" href="#" data-lang="el">
-                  <img
-                    src="Images/Flags/greek.png"
-                    alt="Greek"
-                    style="width:20px; margin-right:5px;"
-                  />
+                  <img src="Images/Flags/greek.png" alt="Greek" style="width:20px; margin-right:5px;" />
                   Ελληνικά
                 </a>
               </li>
@@ -330,7 +272,7 @@
 
       <!-- Day Trips Section -->
       <h2 class="section-title" data-i18n="dayTrips.heading">Day Trips</h2>
-      
+
       <!-- Falasarna Service (Reverse layout) -->
       <div class="service-grid reverse trip-service" data-aos="fade-up">
         <div class="service-title">
@@ -340,23 +282,12 @@
         </div>
         <div class="service-image">
           <!-- LCP image: explicit width & height, plus optional decoding & fetchpriority -->
-          <img
-            src="Images/falassarna-top-1-1280.webp"
-            alt="Falasarna"
-            width="1280"
-            height="720"
-            decoding="async"
-            fetchpriority="high"
-            class="img-fluid rounded"
-          />
+          <img src="Images/falassarna-top-1-1280.webp" alt="Falasarna" width="1280" height="720" decoding="async"
+            fetchpriority="high" class="img-fluid rounded" />
         </div>
         <div class="service-details">
           <div class="price-box my-3">
-            <button
-              type="button"
-              class="btn btn-primary btn-lg"
-              data-i18n="dayTrips.falasarna.price"
-            >
+            <button type="button" class="btn btn-primary btn-lg" data-i18n="dayTrips.falasarna.price">
               €50 per person
             </button>
           </div>
@@ -448,7 +379,7 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Elafonisi Service (Standard layout) -->
       <div class="service-grid standard trip-service" data-aos="fade-up">
         <div class="service-title">
@@ -458,23 +389,12 @@
         </div>
         <div class="service-image">
           <!-- Non-LCP images can use lazy loading -->
-          <img
-            src="Images/it_elafonisi.webp"
-            alt="Elafonisi"
-            width="1280"
-            height="720"
-            decoding="async"
-            loading="lazy"
-            class="img-fluid rounded"
-          />
+          <img src="Images/it_elafonisi.webp" alt="Elafonisi" width="1280" height="720" decoding="async" loading="lazy"
+            class="img-fluid rounded" />
         </div>
         <div class="service-details">
           <div class="price-box my-3">
-            <button
-              type="button"
-              class="btn btn-primary btn-lg"
-              data-i18n="dayTrips.elafonisi.price"
-            >
+            <button type="button" class="btn btn-primary btn-lg" data-i18n="dayTrips.elafonisi.price">
               €60 per person
             </button>
           </div>
@@ -568,9 +488,117 @@
           </div>
         </div>
       </div>
-      
-      <!-- Custom Day Trips (Reverse) -->
+
+      <!-- Palaiochora Service (Reverse layout - image left) -->
       <div class="service-grid reverse trip-service" data-aos="fade-up">
+        <div class="service-title">
+          <h3 data-i18n="dayTrips.palaiochora.title">
+            Palaiochora - Coastal Charm (min 4 people)
+          </h3>
+        </div>
+        <div class="service-image">
+          <img src="Images/it_palaiochora.webp" alt="Palaiochora" width="1280" height="720" loading="lazy"
+            decoding="async" class="img-fluid rounded" />
+        </div>
+        <div class="service-details">
+          <div class="price-box my-3">
+            <button type="button" class="btn btn-primary btn-lg" data-i18n="dayTrips.palaiochora.price">
+              €65 per person
+            </button>
+          </div>
+          <div class="structured-description">
+            <h4 data-i18n="dayTrips.palaiochora.highlightsTitle">Highlights</h4>
+            <ul>
+              <li data-i18n="dayTrips.palaiochora.highlight1">
+                Discover the laid-back seaside village of Palaiochora
+              </li>
+              <li data-i18n="dayTrips.palaiochora.highlight2">
+                Visit nearby beaches like Krios and Gialiskari
+              </li>
+              <li data-i18n="dayTrips.palaiochora.highlight3">
+                Enjoy both sandy and pebbled coastlines
+              </li>
+              <li data-i18n="dayTrips.palaiochora.highlight4">
+                Stroll through the charming streets and harbor
+              </li>
+            </ul>
+            <h4 data-i18n="dayTrips.palaiochora.fullDescriptionTitle">
+              Full Description
+            </h4>
+            <p data-i18n="dayTrips.palaiochora.fullDescription">
+              Located on the southern coast of Crete, Palaiochora is a charming village
+              known for its relaxed vibe, seaside tavernas, and stunning coastal views.
+              The area offers a variety of beaches, including the organized town beach,
+              the serene pebbled Gialiskari beach, and the more remote Krios beach.
+              It’s a perfect mix of exploration and relaxation for travelers who enjoy both
+              local culture and nature. Transport is via air-conditioned minivan with a
+              professional driver.
+            </p>
+            <h4 data-i18n="dayTrips.palaiochora.timelineTitle">
+              Times & Itinerary
+            </h4>
+            <div class="vertical-timeline">
+              <div class="vertical-timeline-item">
+                <div class="timeline-dot">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5 data-i18n="dayTrips.palaiochora.timeline.pickup">
+                    8:30-9:00 - Pick-up
+                  </h5>
+                  <p data-i18n="dayTrips.palaiochora.timeline.pickupText">
+                    Collection from the Akrotiri/Chania area. Multiple stops may apply.
+                  </p>
+                </div>
+              </div>
+              <div class="vertical-timeline-item">
+                <div class="timeline-dot">
+                  <i class="fas fa-car"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5 data-i18n="dayTrips.palaiochora.timeline.travel">
+                    11:15 - Arrival in Palaiochora
+                  </h5>
+                  <p data-i18n="dayTrips.palaiochora.timeline.travelText">
+                    Time to explore the village, relax on the beaches, or enjoy a seaside lunch.
+                  </p>
+                </div>
+              </div>
+              <div class="vertical-timeline-item">
+                <div class="timeline-dot">
+                  <i class="fas fa-flag-checkered"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5 data-i18n="dayTrips.palaiochora.timeline.return">
+                    17:30 - Depart for Chania
+                  </h5>
+                  <p data-i18n="dayTrips.palaiochora.timeline.returnText">
+                    Return trip with drop-off at designated locations by 19:00.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <h4 data-i18n="dayTrips.palaiochora.includesTitle">Includes</h4>
+            <ul>
+              <li data-i18n="dayTrips.palaiochora.include1">
+                Private air-conditioned minivan transport
+              </li>
+              <li data-i18n="dayTrips.palaiochora.include2">Experienced driver</li>
+              <li data-i18n="dayTrips.palaiochora.include3">
+                Pickup and drop-off from Akrotiri/Chania
+              </li>
+              <li data-i18n="dayTrips.palaiochora.include4">
+                Tips on beaches and food spots
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Custom Day Trips (Reverse) -->
+      <div class="service-grid standard trip-service" data-aos="fade-up">
         <div class="service-title">
           <h3 data-i18n="dayTrips.custom.title">
             And More (Customized Trips) (min 4 people)
@@ -578,23 +606,12 @@
         </div>
         <div class="service-image">
           <!-- Example dimensions; adjust as needed for your actual image size -->
-          <img
-            src="Images/Seitan.jpg"
-            alt="Other Destinations"
-            width="1280"
-            height="720"
-            loading="lazy"
-            decoding="async"
-            class="img-fluid rounded"
-          />
+          <img src="Images/Seitan.jpg" alt="Other Destinations" width="1280" height="720" loading="lazy"
+            decoding="async" class="img-fluid rounded" />
         </div>
         <div class="service-details">
           <div class="price-box my-3">
-            <button
-              type="button"
-              class="btn btn-primary btn-lg"
-              data-i18n="dayTrips.custom.price"
-            >
+            <button type="button" class="btn btn-primary btn-lg" data-i18n="dayTrips.custom.price">
               On request
             </button>
           </div>
@@ -619,33 +636,22 @@
           </div>
         </div>
       </div>
-      
+
       <!-- Shuttle Services Section -->
       <h2 class="section-title" data-i18n="shuttle.heading">Shuttle Services</h2>
-      
+
       <!-- Shuttle to Marathi Beach (Reverse) -->
       <div class="service-grid reverse trip-service" data-aos="fade-up">
         <div class="service-title">
           <h3 data-i18n="shuttle.marathi.title">Shuttle to Marathi Beach</h3>
         </div>
         <div class="service-image">
-          <img
-            src="Images/it_marathi.jpeg"
-            alt="Marathi Beach Shuttle"
-            width="1280"
-            height="720"
-            loading="lazy"
-            decoding="async"
-            class="img-fluid rounded"
-          />
+          <img src="Images/it_marathi.jpeg" alt="Marathi Beach Shuttle" width="1280" height="720" loading="lazy"
+            decoding="async" class="img-fluid rounded" />
         </div>
         <div class="service-details">
           <div class="price-box my-3">
-            <button
-              type="button"
-              class="btn btn-primary btn-lg"
-              data-i18n="shuttle.marathi.price"
-            >
+            <button type="button" class="btn btn-primary btn-lg" data-i18n="shuttle.marathi.price">
               20 € per person
             </button>
           </div>
@@ -668,23 +674,12 @@
           </h3>
         </div>
         <div class="service-image">
-          <img
-            src="Images/agia_triada.webp"
-            alt="Agia Triada Monastery Shuttle"
-            width="1280"
-            height="720"
-            loading="lazy"
-            decoding="async"
-            class="img-fluid rounded"
-          />
+          <img src="Images/agia_triada.webp" alt="Agia Triada Monastery Shuttle" width="1280" height="720"
+            loading="lazy" decoding="async" class="img-fluid rounded" />
         </div>
         <div class="service-details">
           <div class="price-box my-3">
-            <button
-              type="button"
-              class="btn btn-primary btn-lg"
-              data-i18n="shuttle.triada.price"
-            >
+            <button type="button" class="btn btn-primary btn-lg" data-i18n="shuttle.triada.price">
               15 € per person
             </button>
           </div>
@@ -697,7 +692,7 @@
           </p>
         </div>
       </div>
-      
+
       <!-- Evening Shuttle to Chania Center (Reverse) -->
       <div class="service-grid reverse trip-service" data-aos="fade-up">
         <div class="service-title">
@@ -706,24 +701,13 @@
           </h3>
         </div>
         <div class="service-image">
-          <img
-            src="Images/Chania_port.webp"
-            alt="Chania Shuttle"
-            width="1280"
-            height="720"
-            loading="lazy"
-            decoding="async"
-            class="img-fluid rounded"
-          />
+          <img src="Images/Chania_port.webp" alt="Chania Shuttle" width="1280" height="720" loading="lazy"
+            decoding="async" class="img-fluid rounded" />
         </div>
         <div class="service-details">
           <div class="price-box my-3">
-            <button
-              type="button"
-              class="btn btn-primary btn-lg"
-              data-i18n="shuttle.chania.price"
-            >
-              25 € per person
+            <button type="button" class="btn btn-primary btn-lg" data-i18n="shuttle.chania.price">
+              15 € per person
             </button>
           </div>
           <p data-i18n="shuttle.chania.description">
@@ -764,10 +748,10 @@
   <script>
     AOS.init();
   </script>
-  
+
   <!-- i18next Initialization and Language Switcher Script -->
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       const resources = {
         en: {
           translation: {
@@ -835,6 +819,31 @@
                 include3: "Pickup and drop-off from designated areas in Akrotiri/Chania",
                 include4: "Suggestions on local spots and restaurants"
               },
+              "palaiochora": {
+                "title": "Palaiochora - Coastal Charm (min 4 people)",
+                "price": "€65 per person",
+                "highlightsTitle": "Highlights",
+                "highlight1": "Discover the laid-back seaside village of Palaiochora",
+                "highlight2": "Visit nearby beaches like Krios and Gialiskari",
+                "highlight3": "Enjoy both sandy and pebbled coastlines",
+                "highlight4": "Stroll through the charming streets and harbor",
+                "fullDescriptionTitle": "Full Description",
+                "fullDescription": "Located on the southern coast of Crete, Palaiochora is a charming village known for its relaxed vibe, seaside tavernas, and stunning coastal views. The area offers a variety of beaches, including the organized town beach, the serene pebbled Gialiskari beach, and the more remote Krios beach. It’s a perfect mix of exploration and relaxation for travelers who enjoy both local culture and nature. Transport is via air-conditioned minivan with a professional driver.",
+                "timelineTitle": "Times & Itinerary",
+                "timeline": {
+                  "pickup": "8:30-9:00 - Pick-up",
+                  "pickupText": "Collection from the Akrotiri/Chania area. Multiple stops may apply.",
+                  "travel": "11:15 - Arrival in Palaiochora",
+                  "travelText": "Time to explore the village, relax on the beaches, or enjoy a seaside lunch.",
+                  "return": "17:30 - Depart for Chania",
+                  "returnText": "Return trip with drop-off at designated locations by 19:00."
+                },
+                "includesTitle": "Includes",
+                "include1": "Private air-conditioned minivan transport",
+                "include2": "Experienced driver",
+                "include3": "Pickup and drop-off from Akrotiri/Chania",
+                "include4": "Tips on beaches and food spots"
+              },
               custom: {
                 title: "And More (Customized Trips) (min 4 people)",
                 price: "On request",
@@ -859,7 +868,7 @@
               },
               chania: {
                 title: "Evening Shuttle to Chania Center",
-                price: "€25 per person",
+                price: "€15 per person",
                 description: "Perfect for a night out in town: dinner, a stroll along the Venetian port, or shopping. Depart at 8:30 PM, return by 12:30 AM. Shared service with a minimum of 4 people."
               },
               flexibility: "*Pickup and drop-off times can be personalized and flexible upon request.*"
@@ -944,6 +953,31 @@
                 highlight2: "Tailor-made itineraries for a personalized experience",
                 fullDescriptionTitle: "Descrizione Completa",
                 fullDescription: "Oltre ai nostri day trips standard, possiamo organizzare trasferimenti ed escursioni personalizzate in qualsiasi parte della Creta – dalle spiagge appartate agli angoli nascosti dell'isola. Contattaci per opzioni su misura."
+              },
+              "palaiochora": {
+                "title": "Palaiochora - Fascino costiero (min. 4 persone)",
+                "price": "65 € a persona",
+                "highlightsTitle": "Highlights",
+                "highlight1": "Scopri il rilassante villaggio costiero di Palaiochora",
+                "highlight2": "Visita spiagge vicine come Krios e Gialiskari",
+                "highlight3": "Goditi spiagge sia sabbiose che con ciottoli",
+                "highlight4": "Passeggia tra le vie del centro e il porticciolo",
+                "fullDescriptionTitle": "Descrizione Completa",
+                "fullDescription": "Situato sulla costa sud di Creta, Palaiochora è un villaggio affascinante, noto per l’atmosfera tranquilla, le taverne sul mare e i paesaggi costieri mozzafiato. La zona offre diverse spiagge, tra cui quella cittadina attrezzata, la tranquilla Gialiskari con ciottoli e la più remota spiaggia di Krios. Una destinazione perfetta per chi cerca relax, cultura locale e natura. Trasporto in minivan climatizzato con autista esperto.",
+                "timelineTitle": "Orari & Itinerario",
+                "timeline": {
+                  "pickup": "8:30-9:00 - Pick-up",
+                  "pickupText": "Partenza dalla zona di Akrotiri/Chania con eventuali fermate intermedie.",
+                  "travel": "11:15 - Arrivo a Palaiochora",
+                  "travelText": "Tempo libero per visitare il villaggio, rilassarti in spiaggia o pranzare fronte mare.",
+                  "return": "17:30 - Partenza per Chania",
+                  "returnText": "Rientro con drop-off nei punti designati entro le 19:00."
+                },
+                "includesTitle": "Include",
+                "include1": "Trasporto in minivan climatizzato (servizio privato)",
+                "include2": "Autista esperto",
+                "include3": "Pick-up e drop-off nella zona di Akrotiri/Chania",
+                "include4": "Suggerimenti su spiagge e locali dove mangiare"
               }
             },
             shuttle: {
@@ -960,7 +994,7 @@
               },
               chania: {
                 title: "Shuttle serale per Chania Centro",
-                price: "25 € a persona",
+                price: "15 € a persona",
                 description: "Ideale per una serata in città: cena, passeggiata nel porto veneziano o shopping. Partenza ore 8:30, rientro entro le 00:30. Servizio condiviso con minimo 4 persone."
               },
               flexibility: "*Orari personalizzabili e flessibili in base alle esigenze del cliente.*"
@@ -1037,6 +1071,31 @@
                 include3: "Παραλαβή και απόθεση σε προκαθορισμένες περιοχές του Ακρωτηρίου/Χανιών",
                 include4: "Συμβουλές για τοπικά αξιοθέατα και εστιατόρια"
               },
+              "palaiochora": {
+                "title": "Παλαιόχωρα - Παράκτια Γοητεία (ελάχιστο 4 άτομα)",
+                "price": "55 € ανά άτομο",
+                "highlightsTitle": "Κύρια Σημεία",
+                "highlight1": "Ανακαλύψτε το χαλαρό παραθαλάσσιο χωριό της Παλαιόχωρας",
+                "highlight2": "Επισκεφθείτε κοντινές παραλίες όπως Κριός και Γιαλισκάρι",
+                "highlight3": "Απολαύστε παραλίες με άμμο και βότσαλα",
+                "highlight4": "Περπατήστε στα γραφικά σοκάκια και το λιμανάκι",
+                "fullDescriptionTitle": "Πλήρης Περιγραφή",
+                "fullDescription": "Η Παλαιόχωρα, στη νότια ακτή της Κρήτης, είναι ένα παραθαλάσσιο χωριό με ήρεμη ατμόσφαιρα, γραφικές ταβέρνες και μαγευτική θέα στη θάλασσα. Στην περιοχή υπάρχουν πολλές παραλίες, όπως η οργανωμένη δημοτική παραλία, η βραχώδης Γιαλισκάρι και η απομονωμένη παραλία του Κριού. Ιδανική για όσους αναζητούν χαλάρωση και φυσική ομορφιά. Η μεταφορά γίνεται με κλιματιζόμενο ιδιωτικό minivan και έμπειρο οδηγό.",
+                "timelineTitle": "Ωράρια & Διαδρομή",
+                "timeline": {
+                  "pickup": "8:30-9:00 - Παραλαβή",
+                  "pickupText": "Παραλαβή από την περιοχή Ακρωτηρίου/Χανίων. Ενδέχεται να υπάρξουν πολλαπλές στάσεις.",
+                  "travel": "11:15 - Άφιξη στην Παλαιόχωρα",
+                  "travelText": "Χρόνος για περιήγηση στο χωριό, μπάνιο ή φαγητό δίπλα στη θάλασσα.",
+                  "return": "17:30 - Αναχώρηση για Χανιά",
+                  "returnText": "Επιστροφή με αποβίβαση στα καθορισμένα σημεία έως τις 19:00."
+                },
+                "includesTitle": "Περιλαμβάνει",
+                "include1": "Ιδιωτική μεταφορά με κλιματιζόμενο minivan",
+                "include2": "Έμπειρος οδηγός",
+                "include3": "Παραλαβή και αποβίβαση από την περιοχή Ακρωτηρίου/Χανίων",
+                "include4": "Συμβουλές για παραλίες και φαγητό"
+              },
               custom: {
                 title: "Και Επιπλέον (Προσαρμοσμένες Διαδρομές) (ελάχιστο 4 άτομα)",
                 price: "Κατόπιν αιτήματος",
@@ -1061,7 +1120,7 @@
               },
               chania: {
                 title: "Shuttle βραδινό για το κέντρο των Χανίων",
-                price: "25 € ανά άτομο",
+                price: "15 € ανά άτομο",
                 description: "Ιδανικό για μια βραδινή έξοδο στην πόλη: δείπνο, περίπατος στον βενετσιάνικο λιμένα ή ψώνια. Αναχώρηση στις 8:30 και επιστροφή στις 00:30. Κοινή χρήση με ελάχιστο 4 άτομα."
               },
               flexibility: "*Οι ώρες παραλαβής και απόθεσης μπορούν να προσαρμοστούν βάσει των αναγκών του πελάτη.*"
@@ -1119,4 +1178,5 @@
   </script>
 
 </body>
+
 </html>
